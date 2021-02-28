@@ -13,8 +13,37 @@
     </header>
     <main>
         <div id="filter">
-            <form action="">
-
+            <form action="" id="filterForm">
+                <div>
+                    <label for="petsType">Filter By Type</label>
+                    <select id="petsType">
+                        <option value="0">Select</option>
+                        <option value="cat">Cats</option>
+                        <option value="dog">Dogs</option>
+                        <option value="birds">Birds</option>
+                        <option value="rabbit">Rabbit</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="PetsAge">Filter By Age</label>
+                    <select id="PetsAge">
+                        <option value="0">Select</option>
+                        <option value="1">1 Month - 1 Year</option>
+                        <option value="2">Mor than 1 Year</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="">Filter By Price</label>
+                    <select id="PetsPrice">
+                        <option value="0">Select</option>
+                        <option value="1">0.0JD - 500JD</option>
+                        <option value="2">500JD - 1000JD</option>
+                        <option value="3">> 1000JD </option>
+                    </select>
+                </div>
+                <div>
+                    <input type="submit" value="Filter">
+                </div>
             </form>
 
         </div>
