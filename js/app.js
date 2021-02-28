@@ -3,10 +3,10 @@ let reviewOne = "Lorem Ipsum is simply dummy text of the printing and typesettin
 
 let reviewTwo = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic."
 
-let reviewOne = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic."
+let reviewOne1 = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic."
 
 
-localStorage.setItem(reviewOne)
+//localStorage.setItem(reviewOne)
 
 
 'use strict';
@@ -14,7 +14,7 @@ let petArr = [];
 
 // creating constructor function for pets and new pet instances
 
-function Pet(animal, breed, age, price, source){
+function Pet(animal, breed, age, price, source) {
     this.animal = animal;
     this.breed = breed;
     this.age = age;
@@ -23,7 +23,7 @@ function Pet(animal, breed, age, price, source){
     petArr.push(this);
 }
 
-function createPetInstances(){
+function createPetInstances() {
     new Pet('Dogs', 'German Shepherd', '2 months', 600, '../images/dogs/german-shepherd-2mon.jpg');
     new Pet('Dogs', 'German Shepherd', '1 year', 1100, '../images/dogs/german-shepherd-1yr.jpg');
     new Pet('Dogs', 'Golden Retriever', '2 months', 400, '../images/dogs/golden-retriever-2mon.jpg');
@@ -74,19 +74,19 @@ function createPetInstances(){
     new Pet('Rabbits', 'Satin Rabbit', '1 year', 960, '../images/rabbits/satin-rabbit-1yr.jpg');
 }
 
-function PetCart(items){
+function PetCart(items) {
     this.adoptedPets = items;
 }
 
-PetCart.prototype.addPet = function(item){
+PetCart.prototype.addPet = function (item) {
     this.adoptedPets.push(item);
 };
 
-PetCart.prototype.saveToStorage = function(){
+PetCart.prototype.saveToStorage = function () {
     localStorage.setItem('petCart', JSON.stringify(this.adoptedPets));
 };
 
-PetCart.prototype.removePet = function (index){
+PetCart.prototype.removePet = function (index) {
     let newArr = JSON.parse(localStorage.getItem('petCart'));
     newArr.splice(index, 1);
     return newArr;

@@ -61,7 +61,15 @@ a {
   left: 200px;
 
 }
-
+#petsImages{
+  display: inline-block;
+}
+div{width: 30%;}
+img {
+  
+  width: 300px;
+  height: 300px;
+}
 
 
 
