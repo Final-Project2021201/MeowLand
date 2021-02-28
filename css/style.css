@@ -1,3 +1,128 @@
+<<<<<<< HEAD
+*{
+    box-sizing: inherit;
+}
+/* #list{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-between  ;
+    width: inherit;
+    position: relative;
+    left: 250px;
+    width: 900px;
+    font-size: 30px;
+    bottom: 200px;
+    background-color: #025955;
+    
+} */
+.button{
+    position: relative;
+    left: 250px;
+    font-size: 30px;
+    bottom: 300px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-between  ;
+    width: inherit;
+    background-color: #28527a; /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  
+}
+
+#logo{
+    height:200px;
+    width: auto;
+    /* background-color: #4a47a3; */
+    position: relative;
+    left: 30px;
+    top: 30px;
+    
+}
+#pet{
+    position: relative;
+    left: 400px; 
+    bottom: 250px;
+  
+    font-family: 'Frijole', cursive;
+    font-size:90px ;
+    width: 600px;
+}
+
+header{
+    background-color: #a4ebf3;
+    height: 300px;
+}
+
+.Home{
+    font-family: 'Dokdo', cursive;
+    text-decoration: none;
+    color: #350b40;
+    
+    background-color: white; 
+    border: 2px solid #28527a;
+    border-radius: 10px;
+    transition: width 2s;
+    font-size: 30px;
+    
+}
+.Home:hover {
+    text-decoration: none;
+    background-color: #28527a;
+    color: white;
+}
+.PetShop{
+    font-family: 'Dokdo', cursive;
+    text-decoration: none;
+    color: #350b40;
+    font-size: 30px;
+    background-color: white; 
+    border: 2px solid #28527a;
+    border-radius: 10px;
+}
+.PetShop:hover {
+    background-color: #28527a;
+    color: white;
+}
+.accessories-Products{
+    font-family: 'Dokdo', cursive;
+    text-decoration: none;
+    color: #350b40;
+    background-color: white; 
+    border: 2px solid #28527a;
+    border-radius: 10px;
+    font-size: 30px;
+}
+.accessories-Products:hover {
+    background-color: #28527a;
+    color: white;
+}
+.Checkout{
+    font-family: 'Dokdo', cursive;
+    text-decoration: none;
+    color: #350b40;
+    background-color: white; 
+    border: 2px solid #28527a;
+    border-radius: 10px;
+    font-size: 30px;
+}
+.Checkout:hover {
+    background-color: #28527a;
+    color: white;
+}
+=======
 
 
 body {
@@ -76,3 +201,4 @@ img {
 
 
 
+>>>>>>> aff9ffd9102babf627452b97901b70f98749b7cd
