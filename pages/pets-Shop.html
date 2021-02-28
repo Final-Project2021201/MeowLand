@@ -2,11 +2,17 @@
 <html lang="en">
 
 <head>
+<<<<<<< HEAD
     <link href="https://fonts.googleapis.com/css2?family=Frijole&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dokdo&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
     <title>Pet Spot</title>
+=======
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Document</title>
+>>>>>>> aff9ffd9102babf627452b97901b70f98749b7cd
 </head>
 
 
@@ -23,8 +29,37 @@
             </header>
             <main>
         <div id="filter">
-            <form action="">
-
+            <form action="" id="filterForm">
+                <div>
+                    <label for="petsType">Filter By Type</label>
+                    <select id="petsType">
+                        <option value="0">Select</option>
+                        <option value="Cats">Cats</option>
+                        <option value="Dogs">Dogs</option>
+                        <option value="Birds">Birds</option>
+                        <option value="Rabbits">Rabbit</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="petsAge">Filter By Age</label>
+                    <select id="petsAge">
+                        <option value="0">Select</option>
+                        <option value="1">1 Month - 1 Year</option>
+                        <option value="2">Mor than 1 Year</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="">Filter By Price</label>
+                    <select id="petsPrice">
+                        <option value="0">Select</option>
+                        <option value="1">0.0JD - 500JD</option>
+                        <option value="2">500JD - 1000JD</option>
+                        <option value="3">> 1000JD </option>
+                    </select>
+                </div>
+                <div>
+                    <input type="submit" value="Filter">
+                </div>
             </form>
 
         </div>
@@ -39,6 +74,8 @@
     <footer>
 
     </footer>
+    <script src="../js/shope.js"></script>
+    <script src="../js/app.js"></script>
 </body>
 
 
