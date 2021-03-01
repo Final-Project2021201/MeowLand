@@ -17,8 +17,8 @@ function filterProduct(event) {
 
 // Renders images before filtering
 
-function renderImages(){
-    for(let i in petArr){
+function renderImages() {
+    for (let i in petArr) {
         let img = document.createElement('img');
         img.src = petArr[i].source;
         petsImages.appendChild(img);
