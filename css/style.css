@@ -37,18 +37,24 @@ main{
     
 }
 #pet{
+  color: #e3d18a;
     position: relative;
     left: 600px; 
     bottom: 150px;
     font-family: 'Frijole', cursive;
     font-size:90px ;
     width: 600px;
-    
+    transition: width 2s;
+}
+#Pet:hover {
+  background-color: #ffc75f;
+  color: white;
 }
 
 header{
-    background-color: #a4ebf3;
+    background-color: #493323;
     height: 300px;
+    z-index: 500;
 }
 
 .Home{
@@ -57,7 +63,7 @@ header{
     color: #350b40;
     
     background-color: white; 
-    border: 2px solid #28527a;
+    border: 2px solid #eabf9f;
     border-radius: 10px;
     transition: width 2s;
     font-size: 30px;
@@ -65,7 +71,7 @@ header{
 }
 .Home:hover {
     text-decoration: none;
-    background-color: #28527a;
+    background-color: #eabf9f;
     color: white;
 }
 .PetShop{
@@ -74,11 +80,11 @@ header{
     color: #350b40;
     font-size: 30px;
     background-color: white; 
-    border: 2px solid #28527a;
+    border: 2px solid #ffc75f;
     border-radius: 10px;
 }
 .PetShop:hover {
-    background-color: #28527a;
+    background-color: #ffc75f;
     color: white;
 }
 .accessories-Products{
@@ -86,12 +92,12 @@ header{
     text-decoration: none;
     color: #350b40;
     background-color: white; 
-    border: 2px solid #28527a;
+    border: 2px solid #ef8d32;
     border-radius: 10px;
     font-size: 30px;
 }
 .accessories-Products:hover {
-    background-color: #28527a;
+    background-color: #ef8d32;
     color: white;
 }
 .Checkout{
@@ -99,17 +105,17 @@ header{
     text-decoration: none;
     color: #350b40;
     background-color: white; 
-    border: 2px solid #28527a;
+    border: 2px solid #aa2b1d;
     border-radius: 10px;
     font-size: 30px;
 }
 .Checkout:hover {
-    background-color: #28527a;
+    background-color: #aa2b1d;
     color: white;
 }
 
 body {
-  background-color: #a7c5eb;
+  background-color: #e3d18a;
   font-family: Arial, Helvetica, sans-serif;
   height: 1000px;
   
@@ -158,28 +164,64 @@ th , td{
     font-size:32px ;
     padding: 0px 50px 0px 50px;
   text-align: left;
-  border-bottom: 5px solid #ddd;
+  border-bottom: 5px solid #ffd384;
 }
 #addReview{
   font-family: 'RocknRoll One', sans-serif;
-  background-color: aqua;
+  
   font-size: 25px;
   position: relative;
   top: 400px;
-  left: 400px;
+  left: 450px;
   padding: 0px 10px 0px 0px;
 }
 #review{
-  background-color: #350b40;
-  border-radius: 3px;
+  background-color: #f4f9f9;
+  border-radius: 10px;
   height: 50px;
   width: 500px;
-  margin: 0px 30px 0px 30px;
+  margin: 0px 30px 30px 30px;
+ bottom: 30px;
 }
 input{
+  color: #493323;
   border-radius: 5px;
+  font-size: 30px;
   font-family: 'Acme', sans-serif;
-  background-color: #bebebe;
+  background-color: #ffdf91;
   height: 50px;
   width: 100px;
+}
+#petsImages{
+  width: 1400px;
+  position: relative;
+  left: 300px;
+}
+tbody tr td button{
+  font-family: 'Permanent Marker', cursive;
+  background-color: #ffd384;
+  font-size: 30px;
+  border-radius: 5px;
+  height: 45px;
+  
+}
+button{
+  background-color: #9e7540;
+  font-family: 'Pacifico', cursive;
+  font-size:30px ;
+  border-radius: 7px;
+}
+#filterForm{
+  font-size: 25px;
+  font-family: 'Indie Flower', cursive;
+  margin: 10px 0px 0px 20px ;
+ width: 500px;
+ position: relative;
+ left: 33px;
+ 
+}
+.type{
+  position: relative;
+  left: 200px;
+ 
 }
