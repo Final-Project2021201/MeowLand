@@ -3,7 +3,22 @@
 body {
   background-color: #a7c5eb;
   font-family: Arial, Helvetica, sans-serif;
+  overflow: scroll;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
   
+}
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 #main_logo {
@@ -14,9 +29,9 @@ body {
 
 nav {
   display: inline-block;
-  position: fixed;
-  top: 160px;
-  left: 600px;
+  position: relative;
+  top: 20px;
+  left: 400px;
 }
 
 h1 {
@@ -24,7 +39,7 @@ h1 {
   position: fixed;
   font-size: 40px;
   font-family: 'Merriweather Sans';
-  top: 90px;
+  top: 10px;
   color: #4a47a3;
   margin-left: 10px;
   
@@ -45,7 +60,6 @@ li {
   width: 180px;
   text-align: center;
   background-color: #413c69;
-;
   
 }
 
@@ -57,12 +71,38 @@ a {
 }
 
 #main_image {
-  position: absolute;
+  position: relative;
   left: 200px;
 
 }
 
 
+h3 {
+  height: 100px;
+  display: inline-block;
+  vertical-align:auto;
+  text-align: center;
+  font-size:x-large;
+  font-weight: bold;
+  font-family:cursive;
+  color:#413c69;
+
+  
+}
+
+ .floatLeft{
+   float:left;
+   margin-left: 30px;
+   margin-top: 30px;
+   margin-right: 40px;
+ } 
+
+.floatRight{
+  float: right;
+  margin-right: 100px;
+  margin-left: 20px;
+  margin-top:30px ;
+}
 
 
 
