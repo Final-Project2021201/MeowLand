@@ -19,7 +19,6 @@ new PetGuides('Maine Coon', 'Maine Coons have extremely gentle natures which mak
 const cartPets = JSON.parse(localStorage.getItem('petCart')) || [];
 let loadedPetCart = new PetCart(cartPets);
 let petGuidesDiv = document.getElementById('petGuides');
-console.log(loadedPetCart);
 
 // Renders the guides according to selected pets
 
