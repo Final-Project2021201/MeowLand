@@ -1,14 +1,5 @@
 'use strict';
 
-let reviewOne = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic."
-
-let reviewTwo = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic."
-
-let reviewOne1 = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic."
-
-
-//localStorage.setItem(reviewOne)
-
 // creating constructor function for pets and new pet instances
 
 function Pet(animal, breed, age, price, source) {
@@ -39,6 +30,25 @@ PetCart.prototype.removePet = function (index) {
     newArr.splice(index, 1);
     return newArr;
 };
+
+// Creates constructor function for new reviews
+
+const Review = function (reviews) {
+  this.reviewItems = reviews;
+};
+
+Review.prototype.addReview = function (review){
+  this.reviewItems.push(review);
+};
+
+Review.prototype.saveReviewToStorage = function (){
+  localStorage.setItem('reviews', JSON.stringify(this.reviewItems));
+};
+
+function NewReview(name, review) {
+  this.name = name;
+  this.review = review;
+}
 
 
 function createPetInstances() {
