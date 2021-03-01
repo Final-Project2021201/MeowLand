@@ -1,13 +1,19 @@
 
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+
     <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+
     <link href="https://fonts.googleapis.com/css2?family=Frijole&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dokdo&display=swap" rel="stylesheet">
     <title>Pet Spot</title>
+
 
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/style.css">
@@ -25,12 +31,17 @@
             <a href="..\pages\pets-Shop.html" class="button PetShop">Pet Shop</a>
             </header>
             <main>
+
         <div id="filter">
             <form action="" id="filterForm">
                 <div>
                     <label for="petsType">Filter By Type</label>
                     <select id="petsType">
-                        <option value="0">Select</option>
+
+                        
+
+                        <option value="Select">Select</option>
+
                         <option value="Cats">Cats</option>
                         <option value="Dogs">Dogs</option>
                         <option value="Birds">Birds</option>
@@ -41,17 +52,22 @@
                     <label for="petsAge">Filter By Age</label>
                     <select id="petsAge">
                         <option value="0">Select</option>
-                        <option value="1">1 Month - 1 Year</option>
-                        <option value="2">Mor than 1 Year</option>
+
+
+                        <option value="month">less than 1 Year</option>
+                        <option value="year">More than 1 Year</option>
+
                     </select>
                 </div>
                 <div>
                     <label for="">Filter By Price</label>
                     <select id="petsPrice">
-                        <option value="0">Select</option>
-                        <option value="1">0.0JD - 500JD</option>
-                        <option value="2">500JD - 1000JD</option>
-                        <option value="3">> 1000JD </option>
+
+                        <option value="2000">Select</option>
+                        <option value="0">0JD - 499JD</option>
+                        <option value="500">500JD - 999JD</option>
+                        <option value="1000">1000+ JD</option>
+
                     </select>
                 </div>
                 <div>
@@ -59,14 +75,14 @@
                 </div>
             </form>
 
-        </div>
 
-        <div id="shopDiv">
-            <div id="petsImages">
+            <div id="shopDiv">
+                <div id="petsImages">
+
+                </div>
 
             </div>
 
-        </div>
     </main>
     <footer>
 
@@ -75,4 +91,7 @@
     <script src="../js/shop.js"></script>
     
 </body>
+
+
+</html>
 
