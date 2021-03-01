@@ -1,9 +1,28 @@
 'use strict';
 
+const Review = function (reviews) {
+  this.reviewItems = reviews;
+};
+
+Review.prototype.addReview = function (review) {
+  this.reviewItems.push(review);
+};
+
+Review.prototype.saveReviewToStorage = function () {
+  localStorage.setItem('reviews', JSON.stringify(this.reviewItems));
+};
+
+let reviewArr = new Review([]);
+
+function NewReview(name, review) {
+  this.name = name;
+  this.review = review;
+}
+
 let loadedPetCart;
 let tableBody = document.getElementsByTagName('tbody')[0];
-let reviewBox = document.getElementById('addReview');
-reviewBox.addEventListener('submit', handleSubmit);
+let personalInfo = document.getElementById('personalInfo');
+personalInfo.addEventListener('submit', handlePersonalInfoSubmit);
 tableBody.addEventListener('click', removeItemFromCart);
 
 function renderCart() {
@@ -64,6 +83,7 @@ function removeItemFromCart(event) {
 
 renderCart();
 
+<<<<<<< HEAD
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 
 let parent = document.getElementById('parent');
@@ -92,6 +112,11 @@ function handleSubmit(event) {
     child.textContent = rev
 
   }
+
+
+
+
+
 
 }
 
