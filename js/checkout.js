@@ -63,9 +63,17 @@ function removeItemFromCart(event) {
 }
   
 renderCart();
+//////////////////////////////////////////////
+
+let parent = document.getElementById('parent');
+let child = document.createElement('p');
+let rev;
+// let revs = [];
+let reviews = []
 
 function handleSubmit(event){
     event.preventDefault();
-    localStorage.setItem('review', event.target.review.value);
+    reviews.push(event.target.review.value)
+  parent.textContent = ''
 }
 
