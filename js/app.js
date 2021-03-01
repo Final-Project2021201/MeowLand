@@ -1,10 +1,22 @@
+'use strict';
 
+<<<<<<< HEAD
 'use strict';
 let petArr = [];
+=======
+let reviewOne = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic."
+
+let reviewTwo = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic."
+
+let reviewOne1 = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic."
+
+
+//localStorage.setItem(reviewOne)
+>>>>>>> 56b97d371b493d7ef22c6d1fd823c8c3ae548dcf
 
 // creating constructor function for pets and new pet instances
 
-function Pet(animal, breed, age, price, source){
+function Pet(animal, breed, age, price, source) {
     this.animal = animal;
     this.breed = breed;
     this.age = age;
@@ -13,7 +25,28 @@ function Pet(animal, breed, age, price, source){
     petArr.push(this);
 }
 
-function createPetInstances(){
+let petArr = [];
+
+const PetCart = function (items) {
+    this.adoptedPets = items;
+};
+
+PetCart.prototype.addPet = function (item) {
+    this.adoptedPets.push(item);
+};
+
+PetCart.prototype.saveToStorage = function () {
+    localStorage.setItem('petCart', JSON.stringify(this.adoptedPets));
+};
+
+PetCart.prototype.removePet = function (index) {
+    let newArr = JSON.parse(localStorage.getItem('petCart'));
+    newArr.splice(index, 1);
+    return newArr;
+};
+
+
+function createPetInstances() {
     new Pet('Dogs', 'German Shepherd', '2 months', 600, '../images/dogs/german-shepherd-2mon.jpg');
     new Pet('Dogs', 'German Shepherd', '1 year', 1100, '../images/dogs/german-shepherd-1yr.jpg');
     new Pet('Dogs', 'Golden Retriever', '2 months', 400, '../images/dogs/golden-retriever-2mon.jpg');
@@ -22,7 +55,7 @@ function createPetInstances(){
     new Pet('Dogs', 'Pomeranian', '1 year', 1500, '../images/dogs/pomeranian-1yr.jpg');
     new Pet('Dogs', 'Poodle', '3 months', 900, '../images/dogs/poodle-3mon.jpg');
     new Pet('Dogs', 'Poodle', '3 years', 1700, '../images/dogs/poodle-3yr.jpg');
-    new Pet('Dogs', 'Samoyed', '1 month', 900, '../images/dogs/samoyed-1mon.jpg');
+    new Pet('Dogs', 'Samoyed', '1 month', 1000, '../images/dogs/samoyed-1mon.jpg');
     new Pet('Dogs', 'Samoyed', '2 years', 1900, '../images/dogs/samoyed-2yr.jpg');
     new Pet('Dogs', 'Siberian Husky', '1 month', 400, '../images/dogs/siberian-husky-1mon.jpg');
     new Pet('Dogs', 'Siberian Husky', '2 years', 1200, '../images/dogs/siberian-husky-2yr.jpg');
@@ -52,7 +85,7 @@ function createPetInstances(){
     new Pet('Birds', 'Finch', '1 year', 650, '../images/birds/finch-1yr.jpg');
     new Pet('Rabbits', 'Dutch', '1 month', 280, '../images/rabbits/dutch-1mon.jpg');
     new Pet('Rabbits', 'Dutch', '1 year', 640, '../images/rabbits/dutch-1yr.jpg');
-    new Pet('Rabbits', 'Dwarf Hotot', '5 months', 490, '../images/rabbits/dwarf-hotot-5mon.jpg');
+    new Pet('Rabbits', 'Dwarf Hotot', '5 months', 490, '../images/rabbits/dwarf-hotot-5mon.png');
     new Pet('Rabbits', 'Dwarf Hotot', '2 years', 1150, '../images/rabbits/dwarf-hotot-2yr.jpg');
     new Pet('Rabbits', 'Holland Lop', '2 months', 320, '../images/rabbits/holland-lop-2mon.jpg');
     new Pet('Rabbits', 'Holland Lop', '3 years', 990, '../images/rabbits/holland-lop-3yr.jpg');
@@ -63,23 +96,5 @@ function createPetInstances(){
     new Pet('Rabbits', 'Satin Rabbit', '2 months', 390, '../images/rabbits/satin-rabbit-2mon.jpg');
     new Pet('Rabbits', 'Satin Rabbit', '1 year', 960, '../images/rabbits/satin-rabbit-1yr.jpg');
 }
-
-function PetCart(items){
-    this.adoptedPets = items;
-}
-
-PetCart.prototype.addPet = function(item){
-    this.adoptedPets.push(item);
-};
-
-PetCart.prototype.saveToStorage = function(){
-    localStorage.setItem('petCart', JSON.stringify(this.adoptedPets));
-};
-
-PetCart.prototype.removePet = function (index){
-    let newArr = JSON.parse(localStorage.getItem('petCart'));
-    newArr.splice(index, 1);
-    return newArr;
-};
 
 createPetInstances();

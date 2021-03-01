@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 body {
@@ -108,3 +109,149 @@ h3 {
 
 
 
+=======
+
+.button{
+    position: relative;
+    left: 450px;
+    font-size: 30px;
+    bottom: 100px;
+    /* margin: 0; */
+    /* padding: 0; */
+    list-style: none;
+    display: flex;
+    justify-content: space-between  ;
+    width: inherit;
+    background-color: #28527a; /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  
+}
+main{
+  height: max-content;
+  width: max-content;
+}
+#logo{
+    height:230px;
+    width: auto;
+   
+    position: relative;
+    left: 50px;
+    top: 30px;
+    
+}
+#pet{
+    position: relative;
+    left: 600px; 
+    bottom: 150px;
+  
+    font-family: 'Frijole', cursive;
+    font-size:90px ;
+    width: 600px;
+}
+
+header{
+    background-color: #a4ebf3;
+    height: 300px;
+}
+
+.Home{
+    font-family: 'Dokdo', cursive;
+    text-decoration: none;
+    color: #350b40;
+    
+    background-color: white; 
+    border: 2px solid #28527a;
+    border-radius: 10px;
+    transition: width 2s;
+    font-size: 30px;
+    
+}
+.Home:hover {
+    text-decoration: none;
+    background-color: #28527a;
+    color: white;
+}
+.PetShop{
+    font-family: 'Dokdo', cursive;
+    text-decoration: none;
+    color: #350b40;
+    font-size: 30px;
+    background-color: white; 
+    border: 2px solid #28527a;
+    border-radius: 10px;
+}
+.PetShop:hover {
+    background-color: #28527a;
+    color: white;
+}
+.accessories-Products{
+    font-family: 'Dokdo', cursive;
+    text-decoration: none;
+    color: #350b40;
+    background-color: white; 
+    border: 2px solid #28527a;
+    border-radius: 10px;
+    font-size: 30px;
+}
+.accessories-Products:hover {
+    background-color: #28527a;
+    color: white;
+}
+.Checkout{
+    font-family: 'Dokdo', cursive;
+    text-decoration: none;
+    color: #350b40;
+    background-color: white; 
+    border: 2px solid #28527a;
+    border-radius: 10px;
+    font-size: 30px;
+}
+.Checkout:hover {
+    background-color: #28527a;
+    color: white;
+}
+
+body {
+  background-color: #a7c5eb;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 1000px;
+  
+}
+
+#main_image {
+  padding: 50px;
+  position: absolute;
+  left: 300px;
+  top: 300px;
+} 
+
+#three_images {
+  display: inline-block;
+  margin: 30px;
+  padding: 30px;
+  position: relative;
+  top: 500px;
+  width: 1500px; 
+  height: 300px;
+  left: 200px;
+} 
+
+footer{
+  margin:10px ;
+  height: 300px;
+  width: 300px;
+  
+}
+
+
+
+>>>>>>> 56b97d371b493d7ef22c6d1fd823c8c3ae548dcf
