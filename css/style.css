@@ -37,7 +37,7 @@ main{
     
 }
 #pet{
-  color: #e3d18a;
+  color: #9b5c29;
     position: relative;
     left: 600px; 
     bottom: 150px;
@@ -46,13 +46,10 @@ main{
     width: 600px;
     transition: width 2s;
 }
-#Pet:hover {
-  background-color: #ffc75f;
-  color: white;
-}
+
 
 header{
-    background-color: #493323;
+    background-color: #eeebe1;
     height: 300px;
     z-index: 500;
 }
@@ -115,7 +112,7 @@ header{
 }
 
 body {
-  background-color: #e3d18a;
+  background-color: #e7e5df;
   font-family: Arial, Helvetica, sans-serif;
   height: 1000px;
   
@@ -196,6 +193,7 @@ input{
   width: 1400px;
   position: relative;
   left: 300px;
+  bottom: 80px;
 }
 tbody tr td button{
   font-family: 'Permanent Marker', cursive;
@@ -212,8 +210,8 @@ button{
   border-radius: 7px;
 }
 #filterForm{
-  font-size: 25px;
-  font-family: 'Indie Flower', cursive;
+  
+  font-family: 'RocknRoll One', sans-serif;
   margin: 10px 0px 0px 20px ;
  width: 500px;
  position: relative;
@@ -223,5 +221,29 @@ button{
 .type{
   position: relative;
   left: 200px;
- 
+  border-radius: 7px;
+  font-size:18px ;
+  height: 35px;
+  width: 80px;
+}
+.age{
+position: relative;
+left: 450px;
+bottom:35px;
+border-radius: 7px;
+font-size:18px ;
+height: 35px;
+width: 80px;
+}
+.price{
+  position: relative;
+left: 700px;
+bottom:70px;
+border-radius: 7px;
+font-size:18px ;
+height: 35px;
+width: 80px;
+}
+#filter{
+
 }
