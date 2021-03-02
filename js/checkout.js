@@ -77,26 +77,6 @@ function handlePersonalInfoSubmit(event) {
   personalInfo.reset();
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 let loadedAccessoriesCart;
 let tBAccessories = document.getElementById('tBAccessories');
 tBAccessories.addEventListener('click', removeAccessoryFromCart);
@@ -140,12 +120,8 @@ function showAccessoryCart() {
     }
   }
 
-
-
-
-
-
 }
+
 function clearAccessoryCart() {
   tBAccessories.innerHTML = '';
 }
