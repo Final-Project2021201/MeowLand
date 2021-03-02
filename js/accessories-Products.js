@@ -14,6 +14,10 @@ function renderAccessoriesImages() {
         let img = document.createElement('img');
         img.src = accessoriesArr[i].src;
         accessoriesImages.appendChild(img);
+        let paragraph = document.createElement('p');
+        paragraph.innerHTML = `${accessoriesArr[i].type}<br>Price:  ${accessoriesArr[i].price} JD`;
+        accessoriesImages.appendChild(paragraph);
+
         addToCartBtn = document.createElement('button');
         addToCartBtn.textContent = 'Add To Cart';
         addToCartBtn.id = i;
@@ -78,9 +82,11 @@ function renderFilteredAccessories(id) {
     let img = document.createElement('img');
     img.src = accessoriesArr[id].src;
     accessoriesImages.appendChild(img);
+    let paragraph = document.createElement('p');
+    paragraph.innerHTML = `${accessoriesArr[id].type}<br>Price:  ${accessoriesArr[id].price} JD`;
+    accessoriesImages.appendChild(paragraph);
     addToCartBtn = document.createElement('button');
     addToCartBtn.textContent = 'Add To Cart ';
-    addToCartBtn.TEXT_NODE
     addToCartBtn.id = id;
     accessoriesImages.appendChild(addToCartBtn);
     addToCartBtn.addEventListener('click', handleClickingAddToCart);
