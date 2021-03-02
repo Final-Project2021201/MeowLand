@@ -140,6 +140,7 @@ body {
   left: 200px;
 } 
  #petsImages img, #cartTable img
+
  {
     height: 250px;
     width: 250px;
@@ -149,6 +150,7 @@ body {
     height: 250px;
     width: 250px;
  }
+
 footer{
   margin:10px ;
   height: 300px;
