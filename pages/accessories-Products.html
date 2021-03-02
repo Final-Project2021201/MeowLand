@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Frijole&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dokdo&display=swap" rel="stylesheet">
@@ -52,8 +53,8 @@
         <form action="" id="filterFormAcc">
 
             <div>
-                <label for="petsType">Filter By Pet Accessory</label>
-                <select id="petsType">
+                <label for="petsType" class="petType">Filter By Pet Accessory</label>
+                <select id="petsType" class="petType">
                     <option value="Select">Select</option>
                     <option value="Cats">Cats</option>
                     <option value="Dogs">Dogs</option>
@@ -62,8 +63,8 @@
                 </select>
             </div>
             <div>
-                <label for="AccessoriesType">Filter By Type Of Accessories</label>
-                <select id="AccessoriesType">
+                <label for="AccessoriesType" class="acctype">Filter By Type Of Accessories</label>
+                <select id="AccessoriesType" class="acctype">
                     <option value="0">Select</option>
                     <option value="Food">Pets Foods</option>
                     <option value="Clothes">Pets Clothes</option>
@@ -71,8 +72,8 @@
                 </select>
             </div>
             <div>
-                <label for="accessoriesPrice">Filter By Price</label>
-                <select id="accessoriesPrice">
+                <label for="accessoriesPrice" class="accprice">Filter By Price</label>
+                <select id="accessoriesPrice" class="accprice">
                     <option value="-1">Select</option>
                     <option value="0">0JD - 25JD</option>
                     <option value="25">25JD - 75JD</option>
@@ -80,7 +81,7 @@
                 </select>
             </div>
             <div>
-                <input type="submit" value="Filter">
+                <input type="submit" value="Filter" id="btn">
             </div>
             <div>
                 <button id="clearFilterAccessories">Clear Filter</button>
