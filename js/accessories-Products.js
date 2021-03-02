@@ -4,24 +4,26 @@
 
 let filterFormAcc = document.getElementById('filterFormAcc'), addToCartBtn;
 let accessoriesImages = document.getElementById('accessoriesImages');
-
+let clearFilterAccessBtn = document.getElementById('clearFilterAccessories');
 let accessoriesCart = new AccessoriesCart([]);
 
 // Renders accessories product before filtering
 
 function renderAccessoriesImages() {
+    accessoriesImages.innerHTML = '';
     for (let i in accessoriesArr) {
+        let div = document.createElement('div');
+        accessoriesImages.appendChild(div);
         let img = document.createElement('img');
         img.src = accessoriesArr[i].src;
-        accessoriesImages.appendChild(img);
+        div.appendChild(img);
         let paragraph = document.createElement('p');
         paragraph.innerHTML = `${accessoriesArr[i].type}<br>Price:  ${accessoriesArr[i].price} JD`;
-        accessoriesImages.appendChild(paragraph);
-
+        div.appendChild(paragraph);
         addToCartBtn = document.createElement('button');
         addToCartBtn.textContent = 'Add To Cart';
         addToCartBtn.id = i;
-        accessoriesImages.appendChild(addToCartBtn);
+        div.appendChild(addToCartBtn);
         addToCartBtn.addEventListener('click', handleClickingAddToCart);
     }
 }
@@ -30,7 +32,7 @@ renderAccessoriesImages();
 
 
 
-
+//Fiter accessories btn event
 
 filterFormAcc.addEventListener('submit', filterAcc);
 function filterAcc(event) {
@@ -79,24 +81,65 @@ function preRenderFilteredItems(animal, type, priceRange) {
 // Renders accessories images after filtering
 
 function renderFilteredAccessories(id) {
+    let div = document.createElement('div');
+    accessoriesImages.appendChild(div);
     let img = document.createElement('img');
     img.src = accessoriesArr[id].src;
-    accessoriesImages.appendChild(img);
+    div.appendChild(img);
     let paragraph = document.createElement('p');
     paragraph.innerHTML = `${accessoriesArr[id].type}<br>Price:  ${accessoriesArr[id].price} JD`;
-    accessoriesImages.appendChild(paragraph);
+    div.appendChild(paragraph);
     addToCartBtn = document.createElement('button');
     addToCartBtn.textContent = 'Add To Cart ';
     addToCartBtn.id = id;
-    accessoriesImages.appendChild(addToCartBtn);
+    div.appendChild(addToCartBtn);
     addToCartBtn.addEventListener('click', handleClickingAddToCart);
 }
 
+//Clear fiteration for Accessoiers
+
+clearFilterAccessBtn.addEventListener('click', clearFilter_Accessories);
+function clearFilter_Accessories(event) {
+    filterFormAcc.reset();
+    renderAccessoriesImages();
+}
+
+const myNotification = window.createNotification({
+    // options here
+});
 // Add accessory Choosen by user to the cart
 function handleClickingAddToCart() {
     event.preventDefault();
     let index = parseInt(event.target.id);
     accessoriesCart.addAccessory(accessoriesArr[index]);
     accessoriesCart.saveToStorage();
+
+    myNotification({
+        title: "",
+        message: "djskjfdslflsfsfldsf"
+    });
+    myNotification({
+
+        // close on click
+        closeOnClick: true,
+
+        // displays close button
+        displayCloseButton: false,
+
+        // nfc-top-left
+        // nfc-bottom-right
+        // nfc-bottom-left
+        positionClass: 'nfc-top-right',
+
+        // callback
+        onclick: false,
+
+        // timeout in milliseconds
+        showDuration: 3500,
+
+        // success, info, warning, error, and none
+        theme: 'success'
+
+    });
 }
 

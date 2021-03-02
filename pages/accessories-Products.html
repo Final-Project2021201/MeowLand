@@ -6,12 +6,39 @@
     <link href="https://fonts.googleapis.com/css2?family=Frijole&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dokdo&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+
     <title>Accessories</title>
 </head>
+<link rel="stylesheet" href="../css/notifications.css" type="text/css">
+<style>
+    #accessoriesImages img {
+        height: 85%;
+        width: 85%;
+
+        position: static;
+
+    }
+
+    #accessoriesImages div {
+        display: inline-block;
+        margin: 3%;
+        width: 18%;
+        position: relative;
+        columns: 100em;
+    }
+
+    #accessoriesImages {
+        position: absolute;
+
+        text-align: center;
+
+    }
+</style>
 
 <body>
+
     <header>
         <div>
             <img src="../images\logo\ImagefromiOS.png" alt="logo" id="logo">
@@ -56,6 +83,9 @@
             <div>
                 <input type="submit" value="Filter" id="btn">
             </div>
+            <div>
+                <button id="clearFilterAccessories">Clear Filter</button>
+            </div>
         </form>
 
         <div id="accessoriesDiv">
@@ -69,8 +99,11 @@
     <footer>
 
     </footer>
+    <script src="../js/notifications.js"></script>
     <script src="../js/app.js"></script>
     <script src="../js/accessories-Products.js"></script>
+
+
 </body>
 
 </html>
