@@ -26,6 +26,7 @@
 main{
   height: max-content;
   width: max-content;
+  background-color: #fffbf1;
 }
 #logo{
     height:230px;
@@ -37,7 +38,7 @@ main{
     
 }
 #pet{
-  color: #e3d18a;
+  color: #ac1b3d;
     position: relative;
     left: 600px; 
     bottom: 150px;
@@ -46,13 +47,8 @@ main{
     width: 600px;
     transition: width 2s;
 }
-#Pet:hover {
-  background-color: #ffc75f;
-  color: white;
-}
-
 header{
-    background-color: #493323;
+    background-color: #fffbf1;
     height: 300px;
     z-index: 500;
 }
@@ -60,7 +56,7 @@ header{
 .Home{
     font-family: 'Dokdo', cursive;
     text-decoration: none;
-    color: #350b40;
+    color: #d7385e;
     
     background-color: white; 
     border: 2px solid #eabf9f;
@@ -80,7 +76,6 @@ header{
     color: #350b40;
     font-size: 30px;
     background-color: white; 
-    border: 2px solid #ffc75f;
     border-radius: 10px;
 }
 .PetShop:hover {
@@ -92,7 +87,6 @@ header{
     text-decoration: none;
     color: #350b40;
     background-color: white; 
-    border: 2px solid #ef8d32;
     border-radius: 10px;
     font-size: 30px;
 }
@@ -105,7 +99,6 @@ header{
     text-decoration: none;
     color: #350b40;
     background-color: white; 
-    border: 2px solid #aa2b1d;
     border-radius: 10px;
     font-size: 30px;
 }
@@ -115,7 +108,7 @@ header{
 }
 
 body {
-  background-color: #e3d18a;
+  background-color: #fffbf1;
   font-family: Arial, Helvetica, sans-serif;
   height: 1000px;
   

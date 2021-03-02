@@ -1,7 +1,5 @@
 'use strict';
 
-let reviewArr = new Review([]);
-
 let loadedPetCart;
 let tableBody = document.getElementsByTagName('tbody')[0];
 let personalInfo = document.getElementById('personalInfo');
