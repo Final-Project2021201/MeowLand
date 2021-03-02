@@ -37,7 +37,7 @@ main{
     
 }
 #pet{
-  color: #e3d18a;
+  color: #3d2a1d;
     position: relative;
     left: 600px; 
     bottom: 150px;
@@ -47,12 +47,12 @@ main{
     transition: width 2s;
 }
 #Pet:hover {
-  background-color: #ffc75f;
+  background-color: #484018;
   color: white;
 }
 
 header{
-    background-color: #493323;
+    background-color: #e3d18a;
     height: 300px;
     z-index: 500;
 }
@@ -223,5 +223,38 @@ button{
 .type{
   position: relative;
   left: 200px;
- 
+  border: none;
+  font-size:18px ;
+  height: 35px;
+  width: 80px;
+  border-radius: 7px;
 }
+.age{
+  position: relative;
+  left: 450px;
+  bottom:35px;
+  border-radius: 7px;
+  font-size:18px ;
+  height: 35px;
+  width: 80px;
+  border: none;
+  }
+  .price{
+    position: relative;
+  left: 700px;
+  bottom:70px;
+  border: none;
+  border-radius: 7px;
+  font-size:18px ;
+  height: 35px;
+  width: 80px;
+  }
+ 
+  #petGuides{
+    width:1200px ;
+  }
+  input[type="submit"]{
+    position: relative;
+    left: 300px;
+
+  }
