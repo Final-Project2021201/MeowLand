@@ -86,17 +86,7 @@ function removeItemFromCart(event) {
 renderCart();
 
 
-let parent = document.getElementById('parent');
-let child = document.createElement('p');
-let rev;
-// let revs = [];
-let reviews = []
 
-function handleSubmit(event) {
-  event.preventDefault();
-  reviews.push(event.target.review.value)
-  parent.textContent = ''
-}
 function handlePersonalInfoSubmit(event) {
   event.preventDefault();
   let newReview = new NewReview(event.target.fullName.value, event.target.review.value);
