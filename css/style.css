@@ -1,4 +1,5 @@
 
+
 .button{
     position: relative;
     left: 450px;
@@ -26,7 +27,6 @@
 main{
   height: max-content;
   width: max-content;
-  background-color: #fffbf1;
 }
 #logo{
     height:230px;
@@ -38,11 +38,7 @@ main{
     
 }
 #pet{
-
-  color: #9b5c29;
-
-  color: #ac1b3d;
-
+  color: #3d2a1d;
     position: relative;
     left: 600px; 
     bottom: 150px;
@@ -51,10 +47,13 @@ main{
     width: 600px;
     transition: width 2s;
 }
+#Pet:hover {
+  background-color: #484018;
+  color: white;
+}
 
 header{
-    background-color: #fffbf1;
-
+    background-color: #e3d18a;
     height: 300px;
     z-index: 500;
 }
@@ -62,7 +61,7 @@ header{
 .Home{
     font-family: 'Dokdo', cursive;
     text-decoration: none;
-    color: #d7385e;
+    color: #350b40;
     
     background-color: white; 
     border: 2px solid #eabf9f;
@@ -82,6 +81,7 @@ header{
     color: #350b40;
     font-size: 30px;
     background-color: white; 
+    border: 2px solid #ffc75f;
     border-radius: 10px;
 }
 .PetShop:hover {
@@ -93,6 +93,7 @@ header{
     text-decoration: none;
     color: #350b40;
     background-color: white; 
+    border: 2px solid #ef8d32;
     border-radius: 10px;
     font-size: 30px;
 }
@@ -105,6 +106,7 @@ header{
     text-decoration: none;
     color: #350b40;
     background-color: white; 
+    border: 2px solid #aa2b1d;
     border-radius: 10px;
     font-size: 30px;
 }
@@ -114,9 +116,7 @@ header{
 }
 
 body {
-
-  background-color: #fffbf1;
-
+  background-color: #e3d18a;
   font-family: Arial, Helvetica, sans-serif;
   height: 1000px;
   
@@ -197,7 +197,6 @@ input{
   width: 1400px;
   position: relative;
   left: 300px;
-  bottom: 80px;
 }
 tbody tr td button{
   font-family: 'Permanent Marker', cursive;
@@ -214,8 +213,8 @@ button{
   border-radius: 7px;
 }
 #filterForm{
-  
-  font-family: 'RocknRoll One', sans-serif;
+  font-size: 25px;
+  font-family: 'Indie Flower', cursive;
   margin: 10px 0px 0px 20px ;
  width: 500px;
  position: relative;
@@ -225,33 +224,38 @@ button{
 .type{
   position: relative;
   left: 200px;
-
+  border: none;
+  font-size:18px ;
+  height: 35px;
+  width: 80px;
+  border-radius: 7px;
+}
+.age{
+  position: relative;
+  left: 450px;
+  bottom:35px;
   border-radius: 7px;
   font-size:18px ;
   height: 35px;
   width: 80px;
-}
-.age{
-position: relative;
-left: 450px;
-bottom:35px;
-border-radius: 7px;
-font-size:18px ;
-height: 35px;
-width: 80px;
-}
-.price{
-  position: relative;
-left: 700px;
-bottom:70px;
-border-radius: 7px;
-font-size:18px ;
-height: 35px;
-width: 80px;
-}
-#filter{
+  border: none;
+  }
+  .price{
+    position: relative;
+  left: 700px;
+  bottom:70px;
+  border: none;
+  border-radius: 7px;
+  font-size:18px ;
+  height: 35px;
+  width: 80px;
+  }
+ 
+  #petGuides{
+    width:1200px ;
+  }
+  input[type="submit"]{
+    position: relative;
+    left: 300px;
 
-}
-
-
-
+  }
