@@ -1,24 +1,5 @@
 'use strict';
 
-const Review = function (reviews) {
-  this.reviewItems = reviews;
-};
-
-Review.prototype.addReview = function (review) {
-  this.reviewItems.push(review);
-};
-
-Review.prototype.saveReviewToStorage = function () {
-  localStorage.setItem('reviews', JSON.stringify(this.reviewItems));
-};
-
-let reviewArr = new Review([]);
-
-function NewReview(name, review) {
-  this.name = name;
-  this.review = review;
-}
-
 let loadedPetCart;
 let tableBody = document.getElementsByTagName('tbody')[0];
 let personalInfo = document.getElementById('personalInfo');
@@ -85,46 +66,16 @@ function removeItemFromCart(event) {
 
 renderCart();
 
+const loadedReviewsArr = JSON.parse(localStorage.getItem('reviews')) || [];
+let loadedReviews = new Review(loadedReviewsArr);
 
-let parent = document.getElementById('parent');
-let child = document.createElement('p');
-let rev;
-// let revs = [];
-let reviews = []
-
-function handleSubmit(event) {
-  event.preventDefault();
-  reviews.push(event.target.review.value)
-  parent.textContent = ''
-}
 function handlePersonalInfoSubmit(event) {
   event.preventDefault();
   let newReview = new NewReview(event.target.fullName.value, event.target.review.value);
-  reviewArr.addReview(newReview);
-  reviewArr.saveReviewToStorage();
+  loadedReviews.addReview(newReview);
+  loadedReviews.saveReviewToStorage();
   personalInfo.reset();
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 let loadedAccessoriesCart;
 let tBAccessories = document.getElementById('tBAccessories');
@@ -169,12 +120,8 @@ function showAccessoryCart() {
     }
   }
 
-
-
-
-
-
 }
+
 function clearAccessoryCart() {
   tBAccessories.innerHTML = '';
 }

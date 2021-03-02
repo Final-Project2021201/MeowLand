@@ -1,18 +1,16 @@
-'use strict'
+'use strict';
 
+// Displays the stored reviews in the homepage
 
-let textareaElement = document.createElement("TEXTAREA");
-textareaElement.placeholder = ("new entry");
+let reviewDiv = document.getElementById('reviews');
+const loadedReviewsArr = JSON.parse(localStorage.getItem('reviews')) || [];
+let loadedReviews = new Review(loadedReviewsArr);
+for (let i in loadedReviews.reviewItems){
+  let nameHeading = document.createElement('h6');
+  reviewDiv.appendChild(nameHeading);
+  nameHeading.textContent = loadedReviews.reviewItems[i].name;
+  let reviewText = document.createElement('p');
+  reviewDiv.appendChild(reviewText);
+  reviewText.textContent = loadedReviews.reviewItems[i].review;
+}
 
-  //localStorage.setItem('name', JSON.stringify(customer));
- // JSON.parse(customer.localStorage.getItem('customer'));
-
-
-
-
-
-//let reviewOne = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic."
-
-//let reviewTwo = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic."
-
-//let reviewthree = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic."
