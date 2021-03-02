@@ -1,0 +1,195 @@
+*{
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body,
+html{
+    height:100%;
+    width:100%;
+}
+
+body {
+
+    background-color: #fffbf1;
+    font-family: Arial, Helvetica, sans-serif;
+ 
+    
+  }
+ 
+  .button{
+    position: relative;
+    left: 40%;
+    font-size: 10%;
+    bottom: 30%;
+    list-style: none;
+    display: flex;
+    justify-content: space-between  ;
+    width: inherit;
+    background-color: #28527a;
+    border: none;
+    color: white;
+    padding: 1% 2%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 5%; 
+    margin: 0.2% 0.8%;    /*very small to use percent*/
+    transition-duration: 0.4s;
+    cursor: pointer;
+  
+}
+  main{
+    height: max-content;
+    width: max-content;
+    background-color: #fffbf1;
+  }
+  #logo{
+      height:230px;
+      width: auto;
+     
+      position: relative;
+      left: 50px;
+      top: 30px;
+      
+  }
+  #pet{
+  
+    color: #9b5c29;
+  
+    color: #ac1b3d;
+  
+      position: relative;
+      left: 600px; 
+      bottom: 150px;
+      font-family: 'Frijole', cursive;
+      font-size:90px ;
+      width: 600px;
+      transition: width 2s;
+  }
+  
+  header{
+      background-color: #fffbf1;
+  
+      height: 300px;
+      z-index: 500;
+  }
+  
+  .Home{
+      font-family: 'Dokdo', cursive;
+      text-decoration: none;
+      color: #d7385e;
+      
+      background-color: white; 
+      border: 2px solid #eabf9f;
+      border-radius: 10px;
+      transition: width 2s;
+      font-size: 30px;
+      
+  }
+  .Home:hover {
+      text-decoration: none;
+      background-color: #eabf9f;
+      color: white;
+  }
+  .PetShop{
+      font-family: 'Dokdo', cursive;
+      text-decoration: none;
+      color: #350b40;
+      font-size: 30px;
+      background-color: white; 
+      border-radius: 10px;
+  }
+  .PetShop:hover {
+      background-color: #ffc75f;
+      color: white;
+  }
+  .accessories-Products{
+      font-family: 'Dokdo', cursive;
+      text-decoration: none;
+      color: #350b40;
+      background-color: white; 
+      border-radius: 10px;
+      font-size: 30px;
+  }
+  .accessories-Products:hover {
+      background-color: #ef8d32;
+      color: white;
+  }
+  .Checkout{
+      font-family: 'Dokdo', cursive;
+      text-decoration: none;
+      color: #350b40;
+      background-color: white; 
+      border-radius: 10px;
+      font-size: 30px;
+  }
+  .Checkout:hover {
+      background-color: #aa2b1d;
+      color: white;
+  }
+
+
+  
+
+#two_images {
+    display: inline-block;
+    margin: 30px;
+    padding: 30px;
+    position:relative;
+    top: 20%;
+    width: 60%; 
+    height: 20%;
+    left: 8%;
+}
+
+#main_image {
+    padding: 50px;
+    position:fixed;
+    left: 30%;
+    top: 30%;
+  } 
+  
+  
+  h3 {
+    height: 10%;
+    display: inline-block;
+    vertical-align:auto;
+    text-align: center;
+    font-size:large;
+    font-weight: bold;
+    font-family:cursive;
+    color:#413c69;
+  
+    
+  }
+  
+
+   .floatLeft{
+     float:left;
+     margin-left: 5%;
+     margin-top: 5%;
+     margin-right: 5%;
+   } 
+  
+  .floatRight{
+    float: right;
+    margin-right: 5%;
+    margin-left: 0.3%;
+    margin-top:10% ;
+    padding-left:5%;
+  }
+
+  .reviews_collection{
+      font-family: sans-serif;
+      font-size: larger;
+  }
+
+  .three_review{
+      bottom: 7%;
+  }
+
+.review_shape{
+    display: flex;
+    margin-bottom: 2%;
+}
