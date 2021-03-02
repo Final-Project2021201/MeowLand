@@ -1,24 +1,5 @@
 'use strict';
 
-const Review = function (reviews) {
-  this.reviewItems = reviews;
-};
-
-Review.prototype.addReview = function (review){
-  this.reviewItems.push(review);
-};
-
-Review.prototype.saveReviewToStorage = function (){
-  localStorage.setItem('reviews', JSON.stringify(this.reviewItems));
-};
-
-let reviewArr = new Review([]);
-
-function NewReview(name, review) {
-  this.name = name;
-  this.review = review;
-}
-
 let loadedPetCart;
 let tableBody = document.getElementsByTagName('tbody')[0];
 let personalInfo = document.getElementById('personalInfo');
@@ -74,7 +55,9 @@ function clearCart() {
 }
 
 function removeItemFromCart(event) {
+  console.log(event);
   let itemIndex = event.path[2].rowIndex - 1;
+  console.log(itemIndex);
   let deletedRow = tableBody.childNodes[itemIndex];
   tableBody.removeChild(deletedRow);
   let newArr = loadedPetCart.removePet(itemIndex);
@@ -83,24 +66,74 @@ function removeItemFromCart(event) {
 
 renderCart();
 
-
-let parent = document.getElementById('parent');
-let child = document.createElement('p');
-let rev;
-// let revs = [];
-let reviews = []
-
-function handleSubmit(event){
-    event.preventDefault();
-    reviews.push(event.target.review.value)
-  parent.textContent = ''
+const loadedReviewsArr = JSON.parse(localStorage.getItem('reviews')) || [];
+let loadedReviews = new Review(loadedReviewsArr);
 
 function handlePersonalInfoSubmit(event) {
   event.preventDefault();
   let newReview = new NewReview(event.target.fullName.value, event.target.review.value);
-  reviewArr.addReview(newReview);
-  reviewArr.saveReviewToStorage();
+  loadedReviews.addReview(newReview);
+  loadedReviews.saveReviewToStorage();
   personalInfo.reset();
+}
+
+let loadedAccessoriesCart;
+let tBAccessories = document.getElementById('tBAccessories');
+tBAccessories.addEventListener('click', removeAccessoryFromCart);
+
+function renderAccessoriesCart() {
+  loadAccessoryCart();
+  clearAccessoryCart();
+  showAccessoryCart();
+}
+
+function loadAccessoryCart() {
+  const accessoriesCart = JSON.parse(localStorage.getItem('accessoriesCart')) || [];
+  loadedAccessoriesCart = new AccessoriesCart(accessoriesCart);
+}
+
+loadAccessoryCart();
+
+function showAccessoryCart() {
+  for (let i in loadedAccessoriesCart.cartAccessories) {
+    let tableRow = document.createElement('tr');
+    tBAccessories.appendChild(tableRow);
+    let linkDelete = document.createElement('td');
+    tableRow.appendChild(linkDelete);
+    let deleteButton = document.createElement('button');
+    deleteButton.textContent = 'x';
+    linkDelete.appendChild(deleteButton);
+    let type = document.createElement('td');
+    tableRow.appendChild(type);
+    type.textContent = loadedAccessoriesCart.cartAccessories[i].type;
+    let price = document.createElement('td');
+    tableRow.appendChild(price);
+    price.textContent = loadedAccessoriesCart.cartAccessories[i].price;
+    let pictureData = document.createElement('td');
+    tableRow.appendChild(pictureData);
+    let picture = document.createElement('img');
+    pictureData.appendChild(picture);
+    for (let j in accessoriesArr) {
+      if (accessoriesArr[j].src == loadedAccessoriesCart.cartAccessories[i].src) {
+        picture.src = accessoriesArr[j].src;
+      }
+    }
+  }
 
 }
 
+function clearAccessoryCart() {
+  tBAccessories.innerHTML = '';
+}
+
+function removeAccessoryFromCart(event) {
+  console.log(event);
+  let itemIndex = event.path[2].rowIndex - 1;
+  console.log(itemIndex);
+  let deletedRow = tBAccessories.childNodes[itemIndex];
+  tBAccessories.removeChild(deletedRow);
+  let newArr = loadedAccessoriesCart.removeAccessory(itemIndex);
+  localStorage.setItem('accessoriesCart', JSON.stringify(newArr));
+}
+
+renderAccessoriesCart();

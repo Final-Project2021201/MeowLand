@@ -9,23 +9,67 @@
     <link rel="stylesheet" href="../css/reset.css">
     <title>Accessories</title>
 </head>
+
 <body>
     <header>
-        <div >
-              <img src="../images\logo\ImagefromiOS.png" alt="logo" id="logo">
-                <h1 id="pet">Pet Spot</h1>
-            </div>
-            <a href="..\index.html"class="button Home" >Home</a>
-            <a href="..\pages\checkout.html" class="button Checkout">Checkout</a>
-            <a href="..\pages\accessories-Products.html" class="button accessories-Products">Accessories Products</a>
-            <a href="..\pages\pets-Shop.html" class="button PetShop">Pet Shop</a>
-            </header>
+        <div>
+            <img src="../images\logo\ImagefromiOS.png" alt="logo" id="logo">
+            <h1 id="pet">Pet Spot</h1>
+        </div>
+        <a href="..\index.html" class="button Home">Home</a>
+        <a href="..\pages\checkout.html" class="button Checkout">Checkout</a>
+        <a href="..\pages\accessories-Products.html" class="button accessories-Products">Accessories Products</a>
+        <a href="..\pages\pets-Shop.html" class="button PetShop">Pet Shop</a>
+    </header>
     <main>
+        <form action="" id="filterFormAcc">
+
+            <div>
+                <label for="petsType">Filter By Pet Accessory</label>
+                <select id="petsType">
+                    <option value="Select">Select</option>
+                    <option value="Cats">Cats</option>
+                    <option value="Dogs">Dogs</option>
+                    <option value="Birds">Birds</option>
+                    <option value="Rabbits">Rabbit</option>
+                </select>
+            </div>
+            <div>
+                <label for="AccessoriesType">Filter By Type Of Accessories</label>
+                <select id="AccessoriesType">
+                    <option value="0">Select</option>
+                    <option value="Food">Pets Foods</option>
+                    <option value="Clothes">Pets Clothes</option>
+                    <option value="Toys">Pet Toys </option>
+                </select>
+            </div>
+            <div>
+                <label for="accessoriesPrice">Filter By Price</label>
+                <select id="accessoriesPrice">
+                    <option value="-1">Select</option>
+                    <option value="0">0JD - 25JD</option>
+                    <option value="25">25JD - 75JD</option>
+                    <option value="50">50+ JD</option>
+                </select>
+            </div>
+            <div>
+                <input type="submit" value="Filter">
+            </div>
+        </form>
+
+        <div id="accessoriesDiv">
+            <div id="accessoriesImages">
+
+            </div>
+
+        </div>
 
     </main>
     <footer>
 
     </footer>
+    <script src="../js/app.js"></script>
+    <script src="../js/accessories-Products.js"></script>
 </body>
 
 </html>
