@@ -6,9 +6,8 @@ const cartPets = JSON.parse(localStorage.getItem('petCart')) || [];
 let loadedPetCart = new PetCart(cartPets);
 
 let filterForm = document.getElementById('filterForm'), adoptBtn;
-let petsImages = document.getElementById('petsImages');
 let clearFilterBtn = document.getElementById('clearFilter');
-let shopDiv = document.getElementById('shopDiv'), confirmationMsg;
+let shopDiv = document.getElementById('shopDiv');
 
 // Creates event listener and handling function
 
@@ -16,15 +15,17 @@ filterForm.addEventListener('submit', filterProduct);
 
 function filterProduct(event) {
     event.preventDefault();
-    document.getElementById('petsImages').innerHTML = '';
+    shopDiv.innerHTML = '';
     preRenderFilteredItems(event.target.petsType.value, event.target.petsAge.value, event.target.petsPrice.value);
 }
 
 // Renders images before filtering
 
 function renderImages() {
-    petsImages.innerHTML = '';
+    shopDiv.innerHTML = '';
     for (let i in petArr) {
+        let petsImages = document.createElement('div');
+        shopDiv.appendChild(petsImages);
         let img = document.createElement('img');
         img.src = petArr[i].source;
         petsImages.appendChild(img);
@@ -80,6 +81,8 @@ function preRenderFilteredItems(type, age, priceRange) {
 // Renders images after filtering
 
 function renderFilteredItems(id) {
+    let petsImages = document.createElement('div');
+    shopDiv.appendChild(petsImages);
     let img = document.createElement('img');
     img.src = petArr[id].source;
     petsImages.appendChild(img);
@@ -93,14 +96,40 @@ function renderFilteredItems(id) {
     adoptBtn.addEventListener('click', handleClicking);
 }
 
+// Defines popup
+
+const myNotification = window.createNotification({
+    // options here
+});
+
 // Handles clicking on adopt button so it adds the pet item to the cart and saves it to local storage
 
 function handleClicking(event) {
-    if (!confirmationMsg){
-        confirmationMsg = document.createElement('p');
-        shopDiv.appendChild(confirmationMsg);
-        confirmationMsg.innerHTML = 'Thank you for choosing PetSpot. Click <a href="checkout.html">here<a> to checkout';
-    }
+    myNotification({ 
+
+        // close on click
+        closeOnClick: true,
+      
+        // displays close button
+        displayCloseButton: false,
+      
+        // nfc-top-left
+        // nfc-bottom-right
+        // nfc-bottom-left
+        positionClass: 'nfc-top-right',
+      
+        // callback
+        onclick: false,
+      
+        // timeout in milliseconds
+        showDuration: 3500,
+      
+        // success, info, warning, error, and none
+        theme: 'success',
+
+        title: 'Title',
+        message: 'Notification Message'
+      });
     event.preventDefault();
     let index = parseInt(event.target.id);
     loadedPetCart.addPet(petArr[index]);
