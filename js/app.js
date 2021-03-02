@@ -93,3 +93,11 @@ function createPetInstances() {
 }
 
 createPetInstances();
+
+
+//let feedback=addEventListener('load',funct)
+
+
+// funct get review from local
+
+//
