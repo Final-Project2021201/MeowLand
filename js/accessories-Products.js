@@ -114,8 +114,6 @@ function handleClickingAddToCart() {
 
 
     window.createNotification({
-        title: "Added",
-        message: "added successed",
         // close on click
         closeOnClick: true,
 
@@ -137,8 +135,8 @@ function handleClickingAddToCart() {
         theme: 'success'
 
     })({
-        title: "Added",
-        message: "added successed"
+        title: "Success",
+        message: "Item added"
     });
 
 }

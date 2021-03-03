@@ -1,12 +1,13 @@
 'use strict';
 
 let loadedPetCart;
-let tableBody = document.getElementsByTagName('tbody')[0];
-let cartInfo = document.getElementById('cartInfo');
-let AccessoriesCartInfo = document.getElementById('AccessoriesCartInfo');
+let cartInfo = document.createElement('tbody');
+let AccessoriesCartInfo = document.createElement('tbody');
+let cartTableDiv = document.getElementById('cartTableDiv');
+let cartTable = document.getElementById('cartTable');
 let personalInfo = document.getElementById('personalInfo');
 personalInfo.addEventListener('submit', handlePersonalInfoSubmit);
-tableBody.addEventListener('click', removeItemFromCart);
+cartInfo.addEventListener('click', removeItemFromCart);
 
 function renderCart() {
   loadCart();
@@ -21,55 +22,46 @@ function loadCart() {
 
 loadCart();
 function showCart() {
-  if (loadedPetCart.adoptedPets.length === 0) {
-    cartInfo.style.visibility = 'hidden';
-  } else {
-    for (let i in loadedPetCart.adoptedPets) {
-      let tableRow = document.createElement('tr');
-      tableBody.appendChild(tableRow);
-      let linkDelete = document.createElement('td');
-      tableRow.appendChild(linkDelete);
-      let deleteButton = document.createElement('button');
-      deleteButton.textContent = 'x';
-      linkDelete.appendChild(deleteButton);
-      let breed = document.createElement('td');
-      tableRow.appendChild(breed);
-      breed.textContent = loadedPetCart.adoptedPets[i].breed;
-      let age = document.createElement('td');
-      tableRow.appendChild(age);
-      age.textContent = loadedPetCart.adoptedPets[i].age;
-      let price = document.createElement('td');
-      tableRow.appendChild(price);
-      price.textContent = loadedPetCart.adoptedPets[i].price;
-      let pictureData = document.createElement('td');
-      tableRow.appendChild(pictureData);
-      let picture = document.createElement('img');
-      pictureData.appendChild(picture);
-      for (let j in petArr) {
-        if (petArr[j].source == loadedPetCart.adoptedPets[i].source) {
-          picture.src = petArr[j].source;
-        }
+  for (let i in loadedPetCart.adoptedPets) {
+    cartTable.appendChild(cartInfo);
+    let tableRow = document.createElement('tr');
+    cartInfo.appendChild(tableRow);
+    let linkDelete = document.createElement('td');
+    tableRow.appendChild(linkDelete);
+    let deleteButton = document.createElement('button');
+    deleteButton.textContent = 'x';
+    linkDelete.appendChild(deleteButton);
+    let type = document.createElement('td');
+    tableRow.appendChild(type);
+    type.textContent = loadedPetCart.adoptedPets[i].breed;
+    let price = document.createElement('td');
+    tableRow.appendChild(price);
+    price.textContent = loadedPetCart.adoptedPets[i].price;
+    let pictureData = document.createElement('td');
+    tableRow.appendChild(pictureData);
+    let picture = document.createElement('img');
+    pictureData.appendChild(picture);
+    for (let j in petArr) {
+      if (petArr[j].source == loadedPetCart.adoptedPets[i].source) {
+        picture.src = petArr[j].source;
       }
     }
   }
-
 }
 
 function clearCart() {
-  tableBody.innerHTML = '';
+  cartInfo.innerHTML = '';
 }
 
 function removeItemFromCart(event) {
-  console.log(event);
   let itemIndex = event.path[2].rowIndex - 1;
-  console.log(itemIndex);
-  let deletedRow = tableBody.childNodes[itemIndex];
-  tableBody.removeChild(deletedRow);
+  let deletedRow = cartInfo.childNodes[itemIndex];
+  console.log(cartInfo.childNodes[itemIndex]);
+  cartInfo.removeChild(deletedRow);
   let newArr = loadedPetCart.removePet(itemIndex);
   localStorage.setItem('petCart', JSON.stringify(newArr));
+  checkTableEmpty();
   window.createNotification({
-    title: "Added",
-    message: "added successed",
     // close on click
     closeOnClick: true,
 
@@ -91,22 +83,19 @@ function removeItemFromCart(event) {
     theme: 'warning'
 
   })({
-    title: "Item Deleted",
-    message: "Deleted Successed!"
+    title: "Success",
+    message: "Item removed"
   });
 }
 
-renderCart();
-
 const loadedReviewsArr = JSON.parse(localStorage.getItem('reviews')) || [];
 let loadedReviews = new Review(loadedReviewsArr);
-
-
 
 const submitPersonalInfoNotif = window.createNotification({});
 function handlePersonalInfoSubmit(event) {
   event.preventDefault();
   let newReview = new NewReview(event.target.fullName.value, event.target.review.value);
+  console.log(event.target.fullName.value);
   loadedReviews.addReview(newReview);
   loadedReviews.saveReviewToStorage();
   personalInfo.reset();
@@ -132,14 +121,13 @@ function handlePersonalInfoSubmit(event) {
     theme: 'success'
 
   })({
-    title: "Submited",
-    message: `The order will be delivered in 1 Day \n \n Thank You ${event.target.fullName.value}...  `
+    title: "Submitted",
+    message: "The order will be delivered in 1 Day \n \n Thank You"
   });
 }
 
 let loadedAccessoriesCart;
-let tBAccessories = document.getElementById('tBAccessories');
-tBAccessories.addEventListener('click', removeAccessoryFromCart);
+AccessoriesCartInfo.addEventListener('click', removeAccessoryFromCart);
 
 function renderAccessoriesCart() {
   loadAccessoryCart();
@@ -155,49 +143,51 @@ function loadAccessoryCart() {
 loadAccessoryCart();
 
 function showAccessoryCart() {
-  if (loadedAccessoriesCart.cartAccessories.length === 0) {
-    AccessoriesCartInfo.style.visibility = 'hidden';
-  } else {
-    for (let i in loadedAccessoriesCart.cartAccessories) {
-      let tableRow = document.createElement('tr');
-      tBAccessories.appendChild(tableRow);
-      let linkDelete = document.createElement('td');
-      tableRow.appendChild(linkDelete);
-      let deleteButton = document.createElement('button');
-      deleteButton.textContent = 'x';
-      linkDelete.appendChild(deleteButton);
-      let type = document.createElement('td');
-      tableRow.appendChild(type);
-      type.textContent = loadedAccessoriesCart.cartAccessories[i].type;
-      let price = document.createElement('td');
-      tableRow.appendChild(price);
-      price.textContent = loadedAccessoriesCart.cartAccessories[i].price;
-      let pictureData = document.createElement('td');
-      tableRow.appendChild(pictureData);
-      let picture = document.createElement('img');
-      pictureData.appendChild(picture);
-      for (let j in accessoriesArr) {
-        if (accessoriesArr[j].src == loadedAccessoriesCart.cartAccessories[i].src) {
-          picture.src = accessoriesArr[j].src;
-        }
+  for (let i in loadedAccessoriesCart.cartAccessories) {
+    cartTable.appendChild(AccessoriesCartInfo);
+    let tableRow = document.createElement('tr');
+    AccessoriesCartInfo.appendChild(tableRow);
+    let linkDelete = document.createElement('td');
+    tableRow.appendChild(linkDelete);
+    let deleteButton = document.createElement('button');
+    deleteButton.textContent = 'x';
+    linkDelete.appendChild(deleteButton);
+    let type = document.createElement('td');
+    tableRow.appendChild(type);
+    type.textContent = loadedAccessoriesCart.cartAccessories[i].type;
+    let price = document.createElement('td');
+    tableRow.appendChild(price);
+    price.textContent = loadedAccessoriesCart.cartAccessories[i].price;
+    let pictureData = document.createElement('td');
+    tableRow.appendChild(pictureData);
+    let picture = document.createElement('img');
+    pictureData.appendChild(picture);
+    for (let j in accessoriesArr) {
+      if (accessoriesArr[j].src == loadedAccessoriesCart.cartAccessories[i].src) {
+        picture.src = accessoriesArr[j].src;
       }
     }
   }
 }
 
 function clearAccessoryCart() {
-  tBAccessories.innerHTML = '';
+  AccessoriesCartInfo.innerHTML = '';
 }
 
 const removeAccessoryNotif = window.createNotification({});
 function removeAccessoryFromCart(event) {
-  console.log(event);
-  let itemIndex = event.path[2].rowIndex - 1;
-  console.log(itemIndex);
-  let deletedRow = tBAccessories.childNodes[itemIndex];
-  tBAccessories.removeChild(deletedRow);
+  loadCart();
+  let itemIndex;
+  if(loadedPetCart.adoptedPets.length > 0){
+    itemIndex = event.path[2].rowIndex - (loadedPetCart.adoptedPets.length + 1);
+  } else {
+    itemIndex = event.path[2].rowIndex - 1;
+  }
+  let deletedRow = AccessoriesCartInfo.childNodes[itemIndex];
+  AccessoriesCartInfo.removeChild(deletedRow);
   let newArr = loadedAccessoriesCart.removeAccessory(itemIndex);
   localStorage.setItem('accessoriesCart', JSON.stringify(newArr));
+  checkTableEmpty();
   window.createNotification({
     // close on click
     closeOnClick: true,
@@ -220,9 +210,18 @@ function removeAccessoryFromCart(event) {
     theme: 'warning'
 
   })({
-    title: "Item Deleted",
-    message: "Deleted Successed!"
+    title: "Success",
+    message: "Item deleted"
   });
 }
 
+function checkTableEmpty(){
+  loadCart();
+  loadAccessoryCart();
+  if (loadedPetCart.adoptedPets.length === 0 && loadedAccessoriesCart.cartAccessories.length === 0){
+    cartTableDiv.innerHTML = '';
+  }
+}
+checkTableEmpty();
+renderCart();
 renderAccessoriesCart();

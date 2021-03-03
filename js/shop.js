@@ -114,8 +114,6 @@ function handleClicking(event) {
     loadedPetCart.addPet(petArr[index]);
     loadedPetCart.saveToStorage();
     window.createNotification({
-        title: "Added",
-        message: "added successed!",
         // close on click
         closeOnClick: true,
 
@@ -137,8 +135,8 @@ function handleClicking(event) {
         theme: 'success'
 
     })({
-        title: "Added",
-        message: "added successed"
+      title: "Success",
+      message: "Thank you for choosing PetSpot"
     });
 
 }
