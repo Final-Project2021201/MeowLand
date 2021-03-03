@@ -109,12 +109,6 @@ const myNotification = window.createNotification({
 // Handles clicking on adopt button so it adds the pet item to the cart and saves it to local storage
 
 function handleClicking(event) {
-
-    if (!confirmationMsg) {
-        confirmationMsg = document.createElement('p');
-        shopDiv.appendChild(confirmationMsg);
-        confirmationMsg.innerHTML = 'Thank you for choosing PetSpot. Click <a href="checkout.html">here<a> to checkout';
-    }
     event.preventDefault();
     let index = parseInt(event.target.id);
     loadedPetCart.addPet(petArr[index]);
@@ -154,6 +148,7 @@ function handleClicking(event) {
 clearFilterBtn.addEventListener('click', clearFilter);
 function clearFilter(event) {
   renderImages();
+  filterForm.reset();
 }
 
 

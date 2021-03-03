@@ -7,11 +7,10 @@
 #filterFormAcc select {
     width: 7rem;
     vertical-align: middle;
-    font-size: 1.2rem;
     text-align: center;
     margin: 0.1rem 1.3rem;
 }
-#clearFilterAccessories{
+#clearFilterAccessories{ 
     font-size: 1rem;
     padding: 0.3rem;
     border-radius: 0.2rem;
