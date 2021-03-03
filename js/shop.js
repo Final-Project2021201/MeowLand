@@ -22,6 +22,7 @@ function filterProduct(event) {
 // Renders images before filtering
 
 function renderImages() {
+
   shopDiv.innerHTML = '';
   for (let i in petArr) {
     let petsImages = document.createElement('div');
@@ -38,6 +39,7 @@ function renderImages() {
     petsImages.appendChild(adoptBtn);
     adoptBtn.addEventListener('click', handleClicking);
   }
+
 }
 
 renderImages();
@@ -81,6 +83,7 @@ function preRenderFilteredItems(type, age, priceRange) {
 // Renders images after filtering
 
 function renderFilteredItems(id) {
+
   let petsImages = document.createElement('div');
   shopDiv.appendChild(petsImages);
   let img = document.createElement('img');
@@ -94,6 +97,7 @@ function renderFilteredItems(id) {
   adoptBtn.id = id;
   petsImages.appendChild(adoptBtn);
   adoptBtn.addEventListener('click', handleClicking);
+
 }
 
 // Defines popup
@@ -105,35 +109,44 @@ const myNotification = window.createNotification({
 // Handles clicking on adopt button so it adds the pet item to the cart and saves it to local storage
 
 function handleClicking(event) {
-  myNotification({
 
-    // close on click
-    closeOnClick: true,
+    if (!confirmationMsg) {
+        confirmationMsg = document.createElement('p');
+        shopDiv.appendChild(confirmationMsg);
+        confirmationMsg.innerHTML = 'Thank you for choosing PetSpot. Click <a href="checkout.html">here<a> to checkout';
+    }
+    event.preventDefault();
+    let index = parseInt(event.target.id);
+    loadedPetCart.addPet(petArr[index]);
+    loadedPetCart.saveToStorage();
+    window.createNotification({
+        title: "Added",
+        message: "added successed!",
+        // close on click
+        closeOnClick: true,
 
-    // displays close button
-    displayCloseButton: false,
+        // displays close button
+        displayCloseButton: false,
 
-    // nfc-top-left
-    // nfc-bottom-right
-    // nfc-bottom-left
-    positionClass: 'nfc-top-right',
+        // nfc-top-left
+        // nfc-bottom-right
+        // nfc-bottom-left
+        positionClass: 'nfc-top-right',
 
-    // callback
-    onclick: false,
+        // callback
+        onclick: false,
 
-    // timeout in milliseconds
-    showDuration: 3500,
+        // timeout in milliseconds
+        showDuration: 3500,
 
-    // success, info, warning, error, and none
-    theme: 'success',
+        // success, info, warning, error, and none
+        theme: 'success'
 
-    title: 'Title',
-    message: 'Notification Message'
-  });
-  event.preventDefault();
-  let index = parseInt(event.target.id);
-  loadedPetCart.addPet(petArr[index]);
-  loadedPetCart.saveToStorage();
+    })({
+        title: "Added",
+        message: "added successed"
+    });
+
 }
 
 // Creates event listener for clear filter button
