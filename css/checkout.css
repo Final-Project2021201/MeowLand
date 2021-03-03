@@ -1,50 +1,52 @@
-body {
-  background-color: #f1f1f1;
+#personalInfo {
+  margin: 0.5rem;
 }
 
-
-li {
-  
+#personalInfo label, #personalInfo input {
+  width: 12rem;
   display: inline-block;
-  border-top: 3px solid #bc658d;
-  padding-right: 10px;
-  padding-left: 10px;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  background-color: #f5a7a7;
-  margin: 5px;
-  margin-bottom: 0;
-  height: 40px;
-  text-align: center;
+  margin: 0.5rem 1rem;
 }
 
-a {
-  color: #bc658d;
-  text-decoration: none;
-  font-family:'Dokdo', cursive;
-  font-size: 25px;
-  font-weight: bold;
- 
- 
-  
+#personalInfo input#review{
+  height: 2.8rem;
+}
+#personalInfo input[type="submit"] {
+  font-size: 1.2rem;
+  width: 5rem;
+  border-radius: 0.5rem;
+  background-color: #82c4c3;
+  border: #7ec0be 0.2rem solid;
+  color: #fff5f5;
+}
+#personalInfo input[type="submit"]:hover, #personalInfo input[type="submit"]:active{
+  background-color: #f9d89c;
+  border: #f5d190 solid 0.2rem;
 }
 
-nav {
-  position: absolute;
-  left: 530px;
-  top: 220px;
+table img{
+  width: 6rem;
 }
 
-
-fieldset {
-  border: 1px solid #333;
+table{
+  margin: auto;
+  background-image: radial-gradient( #fff5f5, #fff9f9);
 }
 
+td, th{
+  vertical-align: middle;
+  padding: 1.2rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 
+th{
+  font-size: 1.3rem;
+  font-weight: 600;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
 
-
-
-
-
+td button{
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 0.5rem;
+}
