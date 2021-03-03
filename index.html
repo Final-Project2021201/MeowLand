@@ -2,7 +2,7 @@
 <html lang="en">
 
 
-<head>
+<head> 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Frijole&display=swap" rel="stylesheet">
@@ -14,15 +14,10 @@
 
 
     <title>Home</title>
-    <link rel="stylesheet" href="../css/reset.css">
-
+    <link rel="stylesheet" href="css/reset.css">
    
     <link rel="stylesheet" href="../css/home.css">
    
-
-    <link rel="stylesheet" href="../css/style.css">
-
-
 </head>
 
 
@@ -31,58 +26,111 @@
     
     <header>
 
-        <div>
-            <img src="..\images\Logo\6001 [Converted]-03.png" alt="logo" id="logo">
-            <h1 id="pet">Pet Spot</h1>
-        </div>
-        <a href="index.html" class="button Home">Home</a>
-        <a href="..\pages\checkout.html" class="button Checkout">Checkout</a>
-        <a href="..\pages\accessories-Products.html" class="button accessories-Products">Accessories Products</a>
-        <a href="..\pages\pets-Shop.html" class="button PetShop">Pet Shop</a>
-    </header>
-    <hr>
+        <div >
+              <img src="..\images/Logo/logoo.jpg" alt="logo" id="logo">
+                <h1 id="pet">Pet Spot</h1>
+            </div>
+            <a href="index.html"class="button Home" >Home</a>
+            <a href="..\pages\checkout.html" class="button Checkout">Checkout</a>
+            <a href="..\pages\accessories-Products.html" class="button accessories-Products">Accessories Products</a>
+            <a href="..\pages\pets-Shop.html" class="button PetShop">Pet Shop</a>
+            </header>
+            <hr>
 
-
+     
 
     <main>
-       
-            <div id="main_images">
-                
-            <img id="poster1" src="images/home image/petsaccessories.jpg" alt="">
-            <img id="poster2" src="images/home image/Pets-Accessories.jpg" alt="">
-            
-            
-        </div>
+      <div class="lines">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+         
+        <div class="container">
+
+          
+            <div class="mySlides">
+              <div class="numbertext">1 / 6</div>
+                <img src="images/cats/british-2mon.jpg" style="width:100%" width="1000" height="400">
+            </div>
+          
+            <div class="mySlides">
+              <div class="numbertext">2 / 6</div>
+                <img src="images/home image/Pets-Accessories.jpg" style="width:100%" width="800" height="400">
+            </div>
+          
+            <div class="mySlides">
+              <div class="numbertext">3 / 6</div>
+                <img src="images/dogs/golden-retriever-2mon.jpg" style="width:100%" width="800" height="400">
+            </div>
+          
+            <div class="mySlides">
+              <div class="numbertext">4 / 6</div>
+                <img src="images/cats/ragdoll-3mon.jpg" style="width:100%" width="800" height="400">
+            </div>
+          
+            <div class="mySlides">
+              <div class="numbertext">5 / 6</div>
+                <img src="images/birds/finch-1yr.jpg" style="width:100%" width="800" height="400">
+            </div>
+          
+            <div class="mySlides">
+              <div class="numbertext">6 / 6</div>
+                <img src="images/rabbits/dutch-1yr.jpg" style="width:100%" width="800" height="400">
+            </div>
+          
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          
+            <!-- Image text -->
+            <div class="caption-container">
+              <p id="caption"></p>
+            </div>
+          
+            <!-- Thumbnail images -->
+            <div class="row">
+              <div class="column">
+                <img class="demo cursor" src="images/cats/british-2mon.jpg" style="width:90%" onclick="currentSlide(1)" >
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="images/home image/Pets-Accessories.jpg" style="width:90%" onclick="currentSlide(2)" >
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="images/dogs/golden-retriever-2mon.jpg" style="width:90%" onclick="currentSlide(3)" >
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="images/cats/ragdoll-3mon.jpg" style="width:90%" onclick="currentSlide(4)" >
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="images/birds/finch-1yr.jpg" style="width:90%" onclick="currentSlide(5)" >
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="images/rabbits/dutch-1yr.jpg" style="width:80%" onclick="currentSlide(6)" >
+              </div>
+            </div>
+          </div>
+          
 
 
     
     <div id="two_images">
         
-        <img class="Image floatLeft" src="images/home image/petscsre3.png" width="400" height="200" alt="">
-        <h3 class="petsText">Love your pet <br> <br>
+        <img id="floatLeft" src="images/home image/petscsre3.png" width="400" height="300" alt="">
+        <h2 id="petsText">Love your pet <br><br>
+          Pets need care and attention <br> to keep them <br>
+         healthy, happy, and safe<br> <br> 
             You can find your favorite <br> animal and its food and tools
-             in our store</h3>
-        <img class="Image floatRight" src="images/home image/petscare.png" width="450" height="200" alt="">
+             in our store </h2>
+        <img id="floatRight" src="images/home image/petscare.png" width="450" height="300" alt="">
        
-       <div class="reviews_collection">
-           <div id="three_review" style="overflow: hidden;">
-               <div class="review_shape" style="transform: translate3d(0px,0px,0px);">
-                <div class="review_box1" style="width:300px; margin-right:10px;"></div>
-                <div class="review_box2" style="width:300px; margin-right:10px;"></div>
-                <div class="review_box3" style="width:300px; margin-right:10px;"></div>
-
-                <div class="review_swiper"></div>
-            </div>
         </div>
-       </div> 
-    
-        <div class="reviews"></div>
-        <div class="rev_content"></div>
+        <div id="reviews"></div>
     </main>
 
 
     <footer>
-        &copy;2021
+       
     </footer>
 
     <script src="js/app.js"></script>
