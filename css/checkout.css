@@ -1,0 +1,50 @@
+body {
+  background-color: #f1f1f1;
+}
+
+
+li {
+  
+  display: inline-block;
+  border-top: 3px solid #bc658d;
+  padding-right: 10px;
+  padding-left: 10px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: #f5a7a7;
+  margin: 5px;
+  margin-bottom: 0;
+  height: 40px;
+  text-align: center;
+}
+
+a {
+  color: #bc658d;
+  text-decoration: none;
+  font-family:'Dokdo', cursive;
+  font-size: 25px;
+  font-weight: bold;
+ 
+ 
+  
+}
+
+nav {
+  position: absolute;
+  left: 530px;
+  top: 220px;
+}
+
+
+fieldset {
+  border: 1px solid #333;
+}
+
+
+
+
+
+
+
