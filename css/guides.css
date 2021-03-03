@@ -1,16 +1,56 @@
+*{
+    margin: 0;
+    text-align: center;
+    
+}
+body{
+    background-color: #fff9f9;
+}
+header h1 {
+    font-size: 3rem;
+    font-family: 'Frijole';
+    padding: 0.5rem;
+    color: #bc658d;
+}
+header img, header h1 {
+    display: inline-block;
+    vertical-align: middle;
+}
+header img {
+    width: 10rem;
+}
+nav {
+    background-color: #bc658d;
+}
+nav li{
+    color: antiquewhite;
+    padding: 1rem;
+    list-style: none;
+    display: inline-block;
+}
+nav li:hover, nav li:active{
+    background-color: #9c436d;
+}
+nav a {
+    color: antiquewhite;
+    text-decoration: none;
+    font: 'Indie Flower';
+    font-size: 1.5rem;
+    font-family: 'Acme';
+}
 
 #guidesContainer button {
     cursor: pointer;
     display: block;
-    width: 25%;
+    width: 20%;
     margin-top: 1rem;
     margin-left: auto;
     margin-right: auto;
   
-    border: 4px solid #EABF9F;
+    border: 4px solid #f5a7a7;
     border-radius: 3px;
-    background-color: #EABF9F;
-    color: white;
+    background-color: #f5a7a7;
+    color: #fff9f9;
     font-size: 1rem;
     padding: 0.5rem;
 }  
@@ -18,10 +58,37 @@
       background-color: darken(#EABF9F, 2%);
       border: 1px solid #EABF9F;
 }
-  
+
+#guidesContainer section {
+    font-size: 1.1rem;
+    width: 50rem;
+    margin: 1.5rem auto;
+}
+
+#guidesContainer section h5{
+    font-size: 1.3rem;
+    margin: 0.5rem;
+    font-family: 'Pacifico';
+}
+
+#guidesContainer section h6 {
+    font-size: 1.25rem;
+    margin: 0.5rem;
+}
+
+#guidesContainer section p {
+    font-size: 1.15rem;
+    line-height: 1.20;
+}
+
+#guidesContainer section{
+    color: rgb(61, 57, 57);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
 #guidesContainer div {
     position: relative;
-    max-height: 200px;
+    max-height: 10rem;
     overflow: hidden;
     transition: max-height 1s ease;
 }    
@@ -36,5 +103,6 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+    background: linear-gradient(fff9f9, fff9f9);
 }
+

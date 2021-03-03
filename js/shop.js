@@ -48,13 +48,13 @@ function preRenderFilteredItems(type, age, priceRange) {
   for (let i in petArr) {
     if (type === petArr[i].animal) {
       if (petArr[i].age.includes(age)) {
-        if (petArr[i].price >= parseInt(priceRange) && petArr[i].price < (parseInt(priceRange) + 500)) {
+        if (petArr[i].price >= parseInt(priceRange) && petArr[i].price < (parseInt(priceRange) + 250)) {
           renderFilteredItems(i);
         } else if (priceRange === '2000') {
           renderFilteredItems(i);
         }
       } else if (age === '0') {
-        if (petArr[i].price >= parseInt(priceRange) && petArr[i].price < (parseInt(priceRange) + 500)) {
+        if (petArr[i].price >= parseInt(priceRange) && petArr[i].price < (parseInt(priceRange) + 250)) {
           renderFilteredItems(i);
         } else if (priceRange === '2000') {
           renderFilteredItems(i);
@@ -62,13 +62,13 @@ function preRenderFilteredItems(type, age, priceRange) {
       }
     } else if (type === 'Select') {
       if (petArr[i].age.includes(age)) {
-        if (petArr[i].price >= parseInt(priceRange) && petArr[i].price < (parseInt(priceRange) + 500)) {
+        if (petArr[i].price >= parseInt(priceRange) && petArr[i].price < (parseInt(priceRange) + 250)) {
           renderFilteredItems(i);
         } else if (priceRange === '2000') {
           renderFilteredItems(i);
         }
       } else if (age === '0') {
-        if (petArr[i].price >= parseInt(priceRange) && petArr[i].price < (parseInt(priceRange) + 500)) {
+        if (petArr[i].price >= parseInt(priceRange) && petArr[i].price < (parseInt(priceRange) + 250)) {
           renderFilteredItems(i);
         } else if (priceRange === '2000') {
           renderFilteredItems(i);
