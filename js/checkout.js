@@ -62,6 +62,33 @@ function removeItemFromCart(event) {
   tableBody.removeChild(deletedRow);
   let newArr = loadedPetCart.removePet(itemIndex);
   localStorage.setItem('petCart', JSON.stringify(newArr));
+  window.createNotification({
+    title: "Added",
+    message: "added successed",
+    // close on click
+    closeOnClick: true,
+
+    // displays close button
+    displayCloseButton: false,
+
+    // nfc-top-left
+    // nfc-bottom-right
+    // nfc-bottom-left
+    positionClass: 'nfc-top-right',
+
+    // callback
+    onclick: false,
+
+    // timeout in milliseconds
+    showDuration: 3500,
+
+    // success, info, warning, error, and none
+    theme: 'warning'
+
+  })({
+    title: "Item Deleted",
+    message: "Deleted Successed!"
+  });
 }
 
 renderCart();
@@ -75,6 +102,31 @@ function handlePersonalInfoSubmit(event) {
   loadedReviews.addReview(newReview);
   loadedReviews.saveReviewToStorage();
   personalInfo.reset();
+  window.createNotification({
+    // close on click
+    closeOnClick: true,
+
+    // displays close button
+    displayCloseButton: false,
+
+    // nfc-top-left
+    // nfc-bottom-right
+    // nfc-bottom-left
+    positionClass: 'nfc-top-right',
+
+    // callback
+    onclick: false,
+
+    // timeout in milliseconds
+    showDuration: 3500,
+
+    // success, info, warning, error, and none
+    theme: 'success'
+
+  })({
+    title: "Submited",
+    message: `The order will be delivered in 1 Day \n \n Thank You ${event.target.fullName.value}...  `
+  });
 }
 
 let loadedAccessoriesCart;
@@ -134,6 +186,31 @@ function removeAccessoryFromCart(event) {
   tBAccessories.removeChild(deletedRow);
   let newArr = loadedAccessoriesCart.removeAccessory(itemIndex);
   localStorage.setItem('accessoriesCart', JSON.stringify(newArr));
+  window.createNotification({
+    // close on click
+    closeOnClick: true,
+
+    // displays close button
+    displayCloseButton: false,
+
+    // nfc-top-left
+    // nfc-bottom-right
+    // nfc-bottom-left
+    positionClass: 'nfc-top-right',
+
+    // callback
+    onclick: false,
+
+    // timeout in milliseconds
+    showDuration: 3500,
+
+    // success, info, warning, error, and none
+    theme: 'warning'
+
+  })({
+    title: "Item Deleted",
+    message: "Deleted Successed!"
+  });
 }
 
 renderAccessoriesCart();

@@ -1,27 +1,4 @@
-.button{
-    position: relative;
-    left: 450px;
-    font-size: 30px;
-    bottom: 100px;
-    /* margin: 0; */
-    /* padding: 0; */
-    list-style: none;
-    display: flex;
-    justify-content: space-between  ;
-    width: inherit;
-    background-color: #28527a; /* Green */
-    border: none;
-    color: white;
-    padding: 16px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    transition-duration: 0.4s;
-    cursor: pointer;
-  
-}
+
 main{
   height: max-content;
   width: max-content;
@@ -138,7 +115,7 @@ body {
   height: 300px;
   left: 200px;
 } 
- #petsImages img, #cartTable img
+  #cartTable img
  {
     height: 250px;
     width: 250px;
@@ -183,21 +160,8 @@ th , td{
   margin: 0px 30px 30px 30px;
  bottom: 30px;
 }
-input{
-  color: #493323;
-  border-radius: 5px;
-  font-size: 30px;
-  font-family: 'Acme', sans-serif;
-  background-color: #ffdf91;
-  height: 50px;
-  width: 100px;
-}
-#petsImages{
-  width: 1400px;
-  position: relative;
-  left: 300px;
-  bottom: 80px;
-}
+
+
 tbody tr td button{
   font-family: 'Permanent Marker', cursive;
   background-color: #ffd384;
@@ -206,12 +170,7 @@ tbody tr td button{
   height: 45px;
   
 }
-button{
-  background-color: #9e7540;
-  font-family: 'Pacifico', cursive;
-  font-size:30px ;
-  border-radius: 7px;
-}
+
 #filterForm{
   
   font-family: 'RocknRoll One', sans-serif;

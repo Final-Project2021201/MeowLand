@@ -104,9 +104,6 @@ function clearFilter_Accessories(event) {
     renderAccessoriesImages();
 }
 
-const myNotification = window.createNotification({
-    // options here
-});
 // Add accessory Choosen by user to the cart
 function handleClickingAddToCart() {
     event.preventDefault();
@@ -114,12 +111,11 @@ function handleClickingAddToCart() {
     accessoriesCart.addAccessory(accessoriesArr[index]);
     accessoriesCart.saveToStorage();
 
-    myNotification({
-        title: "",
-        message: "djskjfdslflsfsfldsf"
-    });
-    myNotification({
 
+
+    window.createNotification({
+        title: "Added",
+        message: "added successed",
         // close on click
         closeOnClick: true,
 
@@ -140,6 +136,9 @@ function handleClickingAddToCart() {
         // success, info, warning, error, and none
         theme: 'success'
 
+    })({
+        title: "Added",
+        message: "added successed"
     });
-}
 
+}
