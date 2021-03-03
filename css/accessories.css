@@ -1,0 +1,35 @@
+#filterFormAcc{
+    margin: 1rem;
+}
+#filterFormAcc div{
+    display: inline-block;
+}
+#filterFormAcc select {
+    width: 7rem;
+    vertical-align: middle;
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 0.1rem 1.3rem;
+}
+#clearFilterAccessories{
+    font-size: 1rem;
+    padding: 0.3rem;
+    border-radius: 0.2rem;
+    margin: 0.6rem 0 0 0.6rem;
+}
+#accessoriesDiv div img{
+    width: 15rem;
+    height: 15rem;
+}
+#accessoriesImages div{
+    display:inline-block;
+    margin: 1.5rem;
+    border: #f5a7a7 solid 0.2rem;
+    padding-bottom: 0.1rem;
+}
+#accessoriesDiv button{
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 0.2rem;
+}

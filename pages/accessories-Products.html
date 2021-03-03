@@ -8,97 +8,91 @@
     <link href="https://fonts.googleapis.com/css2?family=Dokdo&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/notifications.css" type="text/css">
+    <link rel="stylesheet" href="../css/accessories.css">
 
     <title>Accessories</title>
 </head>
-<link rel="stylesheet" href="../css/notifications.css" type="text/css">
-<style>
-    #accessoriesImages img {
-        height: 85%;
-        width: 85%;
-
-        position: static;
-
-    }
-
-    #accessoriesImages div {
-        display: inline-block;
-        margin: 3%;
-        width: 18%;
-        position: relative;
-        columns: 100em;
-    }
-
-    #accessoriesImages {
-        position: absolute;
-
-        text-align: center;
-
-    }
-</style>
 
 <body>
 
     <header>
         <div>
-            <img src="../images\logo\ImagefromiOS.png" alt="logo" id="logo">
+            <img src="../images/logoo.png" alt="logo" id="logo">
             <h1 id="pet">Pet Spot</h1>
         </div>
-        <a href="..\index.html" class="button Home">Home</a>
-        <a href="..\pages\checkout.html" class="button Checkout">Checkout</a>
-        <a href="..\pages\accessories-Products.html" class="button accessories-Products">Accessories Products</a>
-        <a href="..\pages\pets-Shop.html" class="button PetShop">Pet Shop</a>
     </header>
-    <main>
-        <form action="" id="filterFormAcc">
-
-            <div>
-                <label for="petsType" class="petType">Filter By Pet Accessory</label>
-                <select id="petsType" class="petType">
-                    <option value="Select">Select</option>
-                    <option value="Cats">Cats</option>
-                    <option value="Dogs">Dogs</option>
-                    <option value="Birds">Birds</option>
-                    <option value="Rabbits">Rabbit</option>
-                </select>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../pages/accessories-Products.html">Accessories Products</a></li>
+            <li><a href="../pages/pets-Shop.html">Pet Shop</a></li>
+            <li><a href="../pages/guides.html">Pet Guides</a></li>
+            <li><a href="../pages/about-us.html">About Us</a></li>
+            <li><a href="../pages/checkout.html">Checkout</a></li>
+        </ul>
+    </nav>
+    <div class="content">
+        <main>
+            <form action="" id="filterFormAcc">
+    
+                <div>
+                    <label for="petsType" class="petType">Filter By Pet Accessory</label>
+                    <select id="petsType" class="petType">
+                        <option value="Select">Select</option>
+                        <option value="Cats">Cats</option>
+                        <option value="Dogs">Dogs</option>
+                        <option value="Birds">Birds</option>
+                        <option value="Rabbits">Rabbit</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="AccessoriesType" class="acctype">Filter By Type Of Accessories</label>
+                    <select id="AccessoriesType" class="acctype">
+                        <option value="0">Select</option>
+                        <option value="Food">Pets Foods</option>
+                        <option value="Clothes">Pets Clothes</option>
+                        <option value="Toys">Pet Toys </option>
+                    </select>
+                </div>
+                <div>
+                    <label for="accessoriesPrice" class="accprice">Filter By Price</label>
+                    <select id="accessoriesPrice" class="accprice">
+                        <option value="-1">Select</option>
+                        <option value="0">0JD - 25JD</option>
+                        <option value="25">25JD - 75JD</option>
+                        <option value="50">50+ JD</option>
+                    </select>
+                </div>
+                <div>
+                    <input type="submit" value="Filter" id="btn">
+                </div>
+                <div>
+                    <button id="clearFilterAccessories">Clear Filter</button>
+                </div>
+            </form>
+    
+            <div id="accessoriesDiv">
+                <div id="accessoriesImages">
+    
+                </div>
+    
             </div>
-            <div>
-                <label for="AccessoriesType" class="acctype">Filter By Type Of Accessories</label>
-                <select id="AccessoriesType" class="acctype">
-                    <option value="0">Select</option>
-                    <option value="Food">Pets Foods</option>
-                    <option value="Clothes">Pets Clothes</option>
-                    <option value="Toys">Pet Toys </option>
-                </select>
+    
+        </main>
+        <footer>
+            <div id="hoursOpen">
+                <h4>Hours Open</h4>
+                <p>09:00 a.m. - 09:00 p.m.</p>
             </div>
-            <div>
-                <label for="accessoriesPrice" class="accprice">Filter By Price</label>
-                <select id="accessoriesPrice" class="accprice">
-                    <option value="-1">Select</option>
-                    <option value="0">0JD - 25JD</option>
-                    <option value="25">25JD - 75JD</option>
-                    <option value="50">50+ JD</option>
-                </select>
+            <iframe width="40%" height="10%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=31.9515694,%2035.9239625&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+            <div id="contactInfo">
+                <h4>Contact Info</h4>
+                <p>Telephone: +962 7788991122</p>
+                <p><a href="mailto:info@petshop.com">info@petshop.com</a></p>
             </div>
-            <div>
-                <input type="submit" value="Filter" id="btn">
-            </div>
-            <div>
-                <button id="clearFilterAccessories">Clear Filter</button>
-            </div>
-        </form>
-
-        <div id="accessoriesDiv">
-            <div id="accessoriesImages">
-
-            </div>
-
-        </div>
-
-    </main>
-    <footer>
-
-    </footer>
+        </footer>
+    </div>
     <script src="../js/notifications.js"></script>
     <script src="../js/app.js"></script>
     <script src="../js/accessories-Products.js"></script>
