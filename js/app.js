@@ -34,20 +34,20 @@ PetCart.prototype.removePet = function (index) {
 // Creates constructor function for new reviews
 
 const Review = function (reviews) {
-  this.reviewItems = reviews;
+    this.reviewItems = reviews;
 };
 
-Review.prototype.addReview = function (review){
-  this.reviewItems.push(review);
+Review.prototype.addReview = function (review) {
+    this.reviewItems.push(review);
 };
 
-Review.prototype.saveReviewToStorage = function (){
-  localStorage.setItem('reviews', JSON.stringify(this.reviewItems));
+Review.prototype.saveReviewToStorage = function () {
+    localStorage.setItem('reviews', JSON.stringify(this.reviewItems));
 };
 
 function NewReview(name, review) {
-  this.name = name;
-  this.review = review;
+    this.name = name;
+    this.review = review;
 }
 
 
@@ -229,3 +229,8 @@ function createAccessoriesInstances() {
 }
 
 createAccessoriesInstances();
+
+window.addEventListener("load", () => {
+    document.querySelector("body").classList.add("loaded");
+});
+

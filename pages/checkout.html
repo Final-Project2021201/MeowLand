@@ -2,6 +2,8 @@
 <html lang="en">
 
 <head>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap" rel="stylesheet">
@@ -58,10 +60,10 @@
     </div>
     <form id="personalInfo">
       <label for="fullName">Full Name</label><input id="fullName" type="text" required pattern="^[a-zA-Z\s]+$"><br>
-      <label for="address">Address</label><input id="address" type="text" required><br>
-      <label for="phoneNo">Phone Number</label><input id="phoneNo" type="text" required pattern="^[0-9]+$"><br>
-      <label for="review">Add a review</label><input id="review" type="text"><br>
-      <input type="submit" value="submit">
+      <label for="address" class="addr">Address</label><input id="address" type="text" required class="addr"><br>
+      <label for="phoneNo" class="phone">Phone Number</label><input id="phoneNo" type="text" required pattern="^[0-9]+$" class="phone"><br>
+      <label for="review" class="review">Add a review</label><input id="review" type="text" class="review"><br>
+      <input type="submit" value="submit" id="sub">
     </form>
   </main>
   <footer>
