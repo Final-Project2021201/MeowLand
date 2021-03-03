@@ -2,7 +2,7 @@
 <html lang="en">
 
 
-<head> 
+<head>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Frijole&display=swap" rel="stylesheet">
@@ -15,48 +15,76 @@
 
     <title>Home</title>
     <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/style.css">
+
    
+    <link rel="stylesheet" href="../css/home.css">
+   
+
+    <link rel="stylesheet" href="../css/style.css">
+
+
 </head>
 
 
 
 <body>
+    
     <header>
 
-        <div >
-              <img src="..\images\Logo\6001 [Converted]-03.png" alt="logo" id="logo">
-                <h1 id="pet">Pet Spot</h1>
-            </div>
-            <a href="index.html"class="button Home" >Home</a>
-            <a href="..\pages\checkout.html" class="button Checkout">Checkout</a>
-            <a href="..\pages\accessories-Products.html" class="button accessories-Products">Accessories Products</a>
-            <a href="..\pages\pets-Shop.html" class="button PetShop">Pet Shop</a>
-            </header>
-            <hr>
+        <div>
+            <img src="..\images\Logo\6001 [Converted]-03.png" alt="logo" id="logo">
+            <h1 id="pet">Pet Spot</h1>
+        </div>
+        <a href="index.html" class="button Home">Home</a>
+        <a href="..\pages\checkout.html" class="button Checkout">Checkout</a>
+        <a href="..\pages\accessories-Products.html" class="button accessories-Products">Accessories Products</a>
+        <a href="..\pages\pets-Shop.html" class="button PetShop">Pet Shop</a>
+    </header>
+    <hr>
 
-     
+
 
     <main>
-        <section id="images">
-            <div id="main_image">
-                <img id="poster" src="https://via.placeholder.com/1100x350/4a47a3" alt="">
-            </div>
-
-
-        </section>
-        <div id="three_images">
-            <img class="sugImages" src="https://via.placeholder.com/445x200" alt="">
-            <img class="sugImages" src="https://via.placeholder.com/445x200" alt="">
-            <img class="sugImages" src="https://via.placeholder.com/445x200" alt="">
+       
+            <div id="main_images">
+                
+            <img id="poster1" src="images/home image/petsaccessories.jpg" alt="">
+            <img id="poster2" src="images/home image/Pets-Accessories.jpg" alt="">
+            
+            
         </div>
-        <div id="reviews"></div>
+
+
+    
+    <div id="two_images">
+        
+        <img class="Image floatLeft" src="images/home image/petscsre3.png" width="400" height="200" alt="">
+        <h3 class="petsText">Love your pet <br> <br>
+            You can find your favorite <br> animal and its food and tools
+             in our store</h3>
+        <img class="Image floatRight" src="images/home image/petscare.png" width="450" height="200" alt="">
+       
+       <div class="reviews_collection">
+           <div id="three_review" style="overflow: hidden;">
+               <div class="review_shape" style="transform: translate3d(0px,0px,0px);">
+                <div class="review_box1" style="width:300px; margin-right:10px;"></div>
+                <div class="review_box2" style="width:300px; margin-right:10px;"></div>
+                <div class="review_box3" style="width:300px; margin-right:10px;"></div>
+
+                <div class="review_swiper"></div>
+            </div>
+        </div>
+       </div> 
+    
+        <div class="reviews"></div>
+        <div class="rev_content"></div>
     </main>
 
 
     <footer>
         &copy;2021
     </footer>
+
     <script src="js/app.js"></script>
     <script src="js/home.js"></script>
 </body>
