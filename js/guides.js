@@ -80,12 +80,12 @@ let parent = document.getElementById('guidesContainer');
         }
     } else {
         for (let i in petGuideArr) {
-            guideSection = document.createElement('section');
+            let guideSection = document.createElement('section');
             parent.appendChild(guideSection);
-            guideContent = document.createElement('div');
-            guideContent.innerHTML = petGuideArr[j].text;
+            let guideContent = document.createElement('div');
+            guideContent.innerHTML = petGuideArr[i].text;
             guideSection.appendChild(guideContent);
-            readBtn = document.createElement('button');
+            let readBtn = document.createElement('button');
             readBtn.textContent = 'Continue Reading';
             guideSection.appendChild(readBtn);
             readBtn.onclick = function (){

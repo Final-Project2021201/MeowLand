@@ -22,21 +22,28 @@
 <body>
   <header>
     <div>
-      <img src="../images/Logo/logoo.png" alt="logo" id="logo">
+      <img src="../images/logoo.png" alt="logo" id="logo">
       <h1 id="pet">Pet Spot</h1>
     </div>
     <nav>
       <ul>
-        <li><a href="..\index.html">Home</a></li>
-        <li><a href="..\pages\pets-Shop.html">Pet Shop</a></li>
-        <li><a href="..\pages\accessories-Products.html">Accessories</a></li>
-        <li><a href="..\pages\checkout.html">About Us</a></li>
-        <li><a href="..\pages\checkout.html">Checkout</a></li>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../pages/pets-Shop.html">Pet Shop</a></li>
+        <li><a href="../pages/accessories-Products.html">Accessories</a></li>
+        <li><a href="../pages/checkout.html">About Us</a></li>
+        <li><a href="../pages/checkout.html">Checkout</a></li>
         <hr>
       </ul>
     </nav>
   </header>
   <main>
+    <form id="personalInfo">
+      <label for="fullName">Full Name</label><input id="fullName" type="text" required pattern="^[a-zA-Z\s]+$"><br>
+      <label for="address" class="addr">Address</label><input id="address" type="text" required class="addr"><br>
+      <label for="phoneNo" class="phone">Phone Number</label><input id="phoneNo" type="text" required pattern="^[0-9]+$" class="phone"><br>
+      <label for="review" class="review">Add a review</label><input id="review" type="text" class="review"><br>
+      <input type="submit" value="submit" id="sub">
+    </form>
     <div id="cartInfo">
       <table id="cartTable">
         <thead>
@@ -67,16 +74,6 @@
         <tfoot></tfoot>
       </table>
     </div>
-    <form id="personalInfo">
-      <fieldset>
-        <label for="fullName">Full Name</label><input id="fullName" type="text" required pattern="^[a-zA-Z\s]+$"><br>
-        <label for="address" class="addr">Address</label><input id="address" type="text" required class="addr"><br>
-        <label for="phoneNo" class="phone">Phone Number</label><input id="phoneNo" type="text" required
-          pattern="^[0-9]+$" class="phone"><br>
-        <label for="review" class="review">Add a review</label><input id="review" type="text" class="review"><br>
-        <input type="submit" value="submit" id="sub">
-      </fieldset>
-    </form>
   </main>
   <footer>
 
