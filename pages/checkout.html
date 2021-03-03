@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  
+
   <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
@@ -11,21 +11,30 @@
   <link href="https://fonts.googleapis.com/css2?family=Frijole&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Dokdo&display=swap" rel="stylesheet">
+
   <title>Checkout</title>
   <link rel="stylesheet" href="../css/reset.css">
   <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/checkout.css">
+  <link rel="stylesheet" href="../css/notifications.css">
 </head>
 
 <body>
   <header>
     <div>
-      <img src="../images\logo\ImagefromiOS.png" alt="logo" id="logo">
+      <img src="../images/Logo/logoo.png" alt="logo" id="logo">
       <h1 id="pet">Pet Spot</h1>
     </div>
-    <a href="..\index.html" class="button Home">Home</a>
-    <a href="..\pages\checkout.html" class="button Checkout">Checkout</a>
-    <a href="..\pages\accessories-Products.html" class="button accessories-Products">Accessories Products</a>
-    <a href="..\pages\pets-Shop.html" class="button PetShop">Pet Shop</a>
+    <nav>
+      <ul>
+        <li><a href="..\index.html">Home</a></li>
+        <li><a href="..\pages\pets-Shop.html">Pet Shop</a></li>
+        <li><a href="..\pages\accessories-Products.html">Accessories</a></li>
+        <li><a href="..\pages\checkout.html">About Us</a></li>
+        <li><a href="..\pages\checkout.html">Checkout</a></li>
+        <hr>
+      </ul>
+    </nav>
   </header>
   <main>
     <div id="cartInfo">
@@ -59,17 +68,21 @@
       </table>
     </div>
     <form id="personalInfo">
-      <label for="fullName">Full Name</label><input id="fullName" type="text" required pattern="^[a-zA-Z\s]+$"><br>
-      <label for="address" class="addr">Address</label><input id="address" type="text" required class="addr"><br>
-      <label for="phoneNo" class="phone">Phone Number</label><input id="phoneNo" type="text" required pattern="^[0-9]+$" class="phone"><br>
-      <label for="review" class="review">Add a review</label><input id="review" type="text" class="review"><br>
-      <input type="submit" value="submit" id="sub">
+      <fieldset>
+        <label for="fullName">Full Name</label><input id="fullName" type="text" required pattern="^[a-zA-Z\s]+$"><br>
+        <label for="address" class="addr">Address</label><input id="address" type="text" required class="addr"><br>
+        <label for="phoneNo" class="phone">Phone Number</label><input id="phoneNo" type="text" required
+          pattern="^[0-9]+$" class="phone"><br>
+        <label for="review" class="review">Add a review</label><input id="review" type="text" class="review"><br>
+        <input type="submit" value="submit" id="sub">
+      </fieldset>
     </form>
   </main>
   <footer>
 
   </footer>
   <script src="../js/app.js"></script>
+  <script src="../js/notifications.js"></script>
   <script src="../js/checkout.js"></script>
 </body>
 

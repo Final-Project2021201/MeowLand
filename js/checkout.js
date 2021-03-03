@@ -69,7 +69,35 @@ renderCart();
 const loadedReviewsArr = JSON.parse(localStorage.getItem('reviews')) || [];
 let loadedReviews = new Review(loadedReviewsArr);
 
+
+
+const submitPersonalInfoNotif = window.createNotification({});
 function handlePersonalInfoSubmit(event) {
+
+  submitPersonalInfoNotif({
+    title: 'Order Have been Submitted!',
+    message: 'Notification Message',
+    // close on click
+    closeOnClick: true,
+
+    // displays close button
+    displayCloseButton: false,
+
+    // nfc-top-left
+    // nfc-bottom-right
+    // nfc-bottom-left
+    positionClass: 'nfc-top-right',
+
+    // callback
+    onclick: false,
+
+    // timeout in milliseconds
+    showDuration: 3500,
+
+    // success, info, warning, error, and none
+    theme: 'success'
+  });
+
   event.preventDefault();
   let newReview = new NewReview(event.target.fullName.value, event.target.review.value);
   loadedReviews.addReview(newReview);
@@ -126,7 +154,31 @@ function clearAccessoryCart() {
   tBAccessories.innerHTML = '';
 }
 
+const removeAccessoryNotif = window.createNotification({});
 function removeAccessoryFromCart(event) {
+  removeAccessoryNotif({
+    title: 'Item has been removed',
+    message: 'Notification Message',
+    // close on click
+    closeOnClick: true,
+
+    // displays close button
+    displayCloseButton: false,
+
+    // nfc-top-left
+    // nfc-bottom-right
+    // nfc-bottom-left
+    positionClass: 'nfc-top-right',
+
+    // callback
+    onclick: false,
+
+    // timeout in milliseconds
+    showDuration: 3500,
+
+    // success, info, warning, error, and none
+    theme: 'warning'
+  });
   console.log(event);
   let itemIndex = event.path[2].rowIndex - 1;
   console.log(itemIndex);
