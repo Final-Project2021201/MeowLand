@@ -110,12 +110,11 @@ function handleClickingAddToCart() {
     let index = parseInt(event.target.id);
     accessoriesCart.addAccessory(accessoriesArr[index]);
     accessoriesCart.saveToStorage();
-
+    Counter();
 
 
     window.createNotification({
-        title: "Added",
-        message: "added successed",
+
         // close on click
         closeOnClick: true,
 
@@ -137,8 +136,8 @@ function handleClickingAddToCart() {
         theme: 'success'
 
     })({
-        title: "Added",
-        message: "added successed"
+        title: "ADD!",
+        message: "Added successfully."
     });
 
 }

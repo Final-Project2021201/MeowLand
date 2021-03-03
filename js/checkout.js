@@ -7,7 +7,6 @@ let AccessoriesCartInfo = document.getElementById('AccessoriesCartInfo');
 let personalInfo = document.getElementById('personalInfo');
 personalInfo.addEventListener('submit', handlePersonalInfoSubmit);
 tableBody.addEventListener('click', removeItemFromCart);
-
 function renderCart() {
   loadCart();
   clearCart();
@@ -60,13 +59,13 @@ function clearCart() {
 }
 
 function removeItemFromCart(event) {
-  console.log(event);
   let itemIndex = event.path[2].rowIndex - 1;
   console.log(itemIndex);
   let deletedRow = tableBody.childNodes[itemIndex];
   tableBody.removeChild(deletedRow);
   let newArr = loadedPetCart.removePet(itemIndex);
   localStorage.setItem('petCart', JSON.stringify(newArr));
+  Counter();
   window.createNotification({
     title: "Added",
     message: "added successed",
@@ -91,8 +90,8 @@ function removeItemFromCart(event) {
     theme: 'warning'
 
   })({
-    title: "Item Deleted",
-    message: "Deleted Successed!"
+    title: "Delete!",
+    message: "Deleted successfully."
   });
 }
 
@@ -106,29 +105,6 @@ let loadedReviews = new Review(loadedReviewsArr);
 const submitPersonalInfoNotif = window.createNotification({});
 function handlePersonalInfoSubmit(event) {
 
-  submitPersonalInfoNotif({
-    title: 'Order Have been Submitted!',
-    message: 'Notification Message',
-    // close on click
-    closeOnClick: true,
-
-    // displays close button
-    displayCloseButton: false,
-
-    // nfc-top-left
-    // nfc-bottom-right
-    // nfc-bottom-left
-    positionClass: 'nfc-top-right',
-
-    // callback
-    onclick: false,
-
-    // timeout in milliseconds
-    showDuration: 3500,
-
-    // success, info, warning, error, and none
-    theme: 'success'
-  });
 
   event.preventDefault();
   let newReview = new NewReview(event.target.fullName.value, event.target.review.value);
@@ -158,7 +134,7 @@ function handlePersonalInfoSubmit(event) {
 
   })({
     title: "Submited",
-    message: `The order will be delivered in 1 Day \n \n Thank You ${event.target.fullName.value}...  `
+    message: `The order will be delivered within 1 Day \n \n Thank You...  `
   });
 }
 
@@ -175,6 +151,7 @@ function renderAccessoriesCart() {
 function loadAccessoryCart() {
   const accessoriesCart = JSON.parse(localStorage.getItem('accessoriesCart')) || [];
   loadedAccessoriesCart = new AccessoriesCart(accessoriesCart);
+
 }
 
 loadAccessoryCart();
@@ -216,36 +193,13 @@ function clearAccessoryCart() {
 
 const removeAccessoryNotif = window.createNotification({});
 function removeAccessoryFromCart(event) {
-  removeAccessoryNotif({
-    title: 'Item has been removed',
-    message: 'Notification Message',
-    // close on click
-    closeOnClick: true,
-
-    // displays close button
-    displayCloseButton: false,
-
-    // nfc-top-left
-    // nfc-bottom-right
-    // nfc-bottom-left
-    positionClass: 'nfc-top-right',
-
-    // callback
-    onclick: false,
-
-    // timeout in milliseconds
-    showDuration: 3500,
-
-    // success, info, warning, error, and none
-    theme: 'warning'
-  });
   console.log(event);
   let itemIndex = event.path[2].rowIndex - 1;
-  console.log(itemIndex);
   let deletedRow = tBAccessories.childNodes[itemIndex];
   tBAccessories.removeChild(deletedRow);
   let newArr = loadedAccessoriesCart.removeAccessory(itemIndex);
   localStorage.setItem('accessoriesCart', JSON.stringify(newArr));
+  Counter();
   window.createNotification({
     // close on click
     closeOnClick: true,
@@ -268,8 +222,8 @@ function removeAccessoryFromCart(event) {
     theme: 'warning'
 
   })({
-    title: "Item Deleted",
-    message: "Deleted Successed!"
+    title: "Delete!",
+    message: "Deleted successfully."
   });
 }
 
