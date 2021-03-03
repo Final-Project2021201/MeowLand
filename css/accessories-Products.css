@@ -1,0 +1,47 @@
+
+    #accessoriesImages img {
+        height: 10rem ;
+        width:10rem;
+        margin-top: 0%;
+        
+
+    }
+
+    #accessoriesImages div {
+        display: inline-block;
+        margin: 2rem;
+        width: 12rem;
+        height: 16rem;
+        position: relative;
+        columns: 100em;
+        border:  solid 2px #F5A7A7;
+        padding: 0.5rem;
+    }
+    #filterFormAcc{
+        position: relative;
+        text-align:center ;
+    }
+    input[type=submit],label, select{
+        color: #FFFBF1;
+        background-color: #F5A7A7;
+        font-family: 'Pacifico', cursive;
+        border-radius: 7px;
+        padding: 0.5rem;
+    }
+    #filterFormAcc div{
+        margin: 2rem;
+        display: inline-block;
+    }
+button{
+  color: #FFFBF1;
+  background-color:  #F5A7A7;
+  font-family: 'Pacifico', cursive;
+  
+  border-radius: 7px;
+}
+    #accessoriesImages {
+        position: absolute;
+
+        text-align: center;
+
+    }

@@ -5,6 +5,7 @@
 let reviewDiv = document.getElementById('reviews');
 const loadedReviewsArr = JSON.parse(localStorage.getItem('reviews')) || [];
 let loadedReviews = new Review(loadedReviewsArr);
+
 for (let i in loadedReviews.reviewItems){
   let divreview=document.createElement('div');
   reviewDiv.appendChild(divreview);
@@ -13,6 +14,7 @@ for (let i in loadedReviews.reviewItems){
   nameHeading.textContent = loadedReviews.reviewItems[i].name;
   let reviewText = document.createElement('p');
   divreview.appendChild(reviewText);
+
   reviewText.textContent = loadedReviews.reviewItems[i].review;
 }
 
