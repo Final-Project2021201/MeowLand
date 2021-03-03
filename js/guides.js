@@ -38,9 +38,9 @@ function makeRequest(method, url) {
 
 async function getGuides() {
     let result = await makeRequest('GET', 'pet-guides.txt');
-    let textArr = result.split('*');
-    for (let i = 0; i < petArr.length; i += 2) {
-        new PetGuide(petArr[i].breed, textArr[0]);
+    let textArr = result.split('****');
+    for (let i = 0; i < textArr.length; i++) {
+        new PetGuide(petArr[i * 2].breed, textArr[i]);
     }
     return petGuideArr
 }
@@ -49,21 +49,52 @@ async function getGuides() {
 
 const cartPets = JSON.parse(localStorage.getItem('petCart')) || [];
 let loadedPetCart = new PetCart(cartPets);
-let petGuidesDiv = document.getElementById('petGuides');
+let parent = document.getElementById('guidesContainer');
 
-// Renders the guides according to selected pets
+// Renders the guides according to selected pets and if no pets are selected all the guides are rendered
 
-(async function(){
+(async function () {
     let petGuideArr = await getGuides();
-    for (let i in loadedPetCart.adoptedPets) {
-        for (let j in petGuideArr) {
-            if (loadedPetCart.adoptedPets[i].breed === petGuideArr[j].breed) {
-                let guideHeader = document.createElement('h6');
-                petGuidesDiv.appendChild(guideHeader);
-                guideHeader.textContent = `How to Take Care of Your ${petGuideArr[j].breed}`;
-                let guideContent = document.createElement('p');
-                guideContent.textContent = petGuideArr[j].text;
-                petGuidesDiv.appendChild(guideContent);
+    if (cartPets.length > 0) {
+        for (let i in loadedPetCart.adoptedPets) {
+            for (let j in petGuideArr) {
+                if (loadedPetCart.adoptedPets[i].breed === petGuideArr[j].breed) {
+                    let guideSection = document.createElement('section');
+                    parent.appendChild(guideSection);
+                    let guideContent = document.createElement('div');
+                    guideContent.innerHTML = petGuideArr[j].text;
+                    guideSection.appendChild(guideContent);
+                    let readBtn = document.createElement('button');
+                    readBtn.textContent = 'Continue Reading';
+                    guideSection.appendChild(readBtn);
+                    readBtn.onclick = function (){
+                        guideContent.classList.toggle('expanded');
+                        if (guideContent.className === 'expanded') {
+                            readBtn.textContent = 'Collapse Content';
+                        } else {
+                            readBtn.textContent = 'Continue Reading';
+                        }
+                    }
+                }
+            }
+        }
+    } else {
+        for (let i in petGuideArr) {
+            guideSection = document.createElement('section');
+            parent.appendChild(guideSection);
+            guideContent = document.createElement('div');
+            guideContent.innerHTML = petGuideArr[j].text;
+            guideSection.appendChild(guideContent);
+            readBtn = document.createElement('button');
+            readBtn.textContent = 'Continue Reading';
+            guideSection.appendChild(readBtn);
+            readBtn.onclick = function (){
+                guideContent.classList.toggle('expanded');
+                if (guideContent.className === 'expanded') {
+                    readBtn.textContent = 'Collapse Content';
+                } else {
+                    readBtn.textContent = 'Continue Reading';
+                }
             }
         }
     }
