@@ -136,8 +136,10 @@ function handleClickingAddToCart() {
         theme: 'success'
 
     })({
+
         title: "ADD!",
         message: "Added successfully."
+
     });
 
 }

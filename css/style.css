@@ -1,4 +1,3 @@
-
 /* header */
 
 * {
@@ -8,7 +7,6 @@
 
 body {
   background-color: #fff9f9;
-
 }
 
 header {
@@ -24,9 +22,7 @@ header h1 {
 
 header img, header h1 {
   display: inline-block;
-
   vertical-align: middle;
-
 }
 
 header img {
@@ -49,7 +45,7 @@ nav {
   padding-top: 5rem;
 }
 
-nav li{
+nav li {
   color: antiquewhite;
   padding: 1rem;
   list-style: none;
@@ -71,7 +67,6 @@ nav a {
 button {
   background-color: #f5a7a7;
   border: #f5a7a7;
-
 }
 
 /* header */
@@ -87,8 +82,12 @@ footer iframe, footer #hoursOpen, footer #contactInfo {
   vertical-align: middle;
 }
 
-footer #hoursOpen, footer #contactInfo {
-  width: 20rem;
+iframe, footer #hoursOpen, footer #contactInfo {
+  width: 26rem;
   font-size: 1.3rem;
   line-height: 1.5rem;
+}
+
+iframe {
+  padding: 1rem 0;
 }

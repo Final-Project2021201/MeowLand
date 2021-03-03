@@ -110,38 +110,36 @@ const myNotification = window.createNotification({
 
 function handleClicking(event) {
 
+    event.preventDefault();
+    let index = parseInt(event.target.id);
+    loadedPetCart.addPet(petArr[index]);
+    loadedPetCart.saveToStorage();
+    window.createNotification({
+        // close on click
+        closeOnClick: true,
 
-  event.preventDefault();
-  let index = parseInt(event.target.id);
-  loadedPetCart.addPet(petArr[index]);
-  loadedPetCart.saveToStorage();
-  Counter();
-  window.createNotification({
+        // displays close button
+        displayCloseButton: false,
 
-    // close on click
-    closeOnClick: true,
+        // nfc-top-left
+        // nfc-bottom-right
+        // nfc-bottom-left
+        positionClass: 'nfc-top-right',
 
-    // displays close button
-    displayCloseButton: false,
+        // callback
+        onclick: false,
 
-    // nfc-top-left
-    // nfc-bottom-right
-    // nfc-bottom-left
-    positionClass: 'nfc-top-right',
+        // timeout in milliseconds
+        showDuration: 3500,
 
-    // callback
-    onclick: false,
+        // success, info, warning, error, and none
+        theme: 'success'
 
-    // timeout in milliseconds
-    showDuration: 3500,
+    })({
+      title: "Success",
+      message: "Thank you for choosing PetSpot"
+    });
 
-    // success, info, warning, error, and none
-    theme: 'success'
-
-  })({
-    title: "ADD!",
-    message: "Added successfully."
-  });
 
 }
 
@@ -151,6 +149,7 @@ clearFilterBtn.addEventListener('click', clearFilter);
 function clearFilter(event) {
   filterForm.reset();
   renderImages();
+  filterForm.reset();
 }
 
 
