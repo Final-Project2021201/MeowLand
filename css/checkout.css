@@ -1,25 +1,39 @@
 #personalInfo {
   margin: 0.5rem;
+  width: 37rem;
+  margin: 1.5rem auto;
 }
 
 #personalInfo label, #personalInfo input {
-  width: 12rem;
   display: inline-block;
-  margin: 0.5rem 1rem;
+  margin: 0.5rem 0;
+  padding: 0.2rem 0;
+}
+#personalInfo label{
+  width: 10rem;
+  font-size: 1.2rem;
+  text-align: left;
+}
+#personalInfo input {
+  width: 24rem;
+  background-color: #fff9ee;
+  border: #856f46 1px solid;
+  border-radius: 0.5rem;
 }
 
 #personalInfo input#review{
-  height: 2.8rem;
+  height: 3.5rem;
 }
-#personalInfo input[type="submit"] {
+input[type="submit"] {
   font-size: 1.2rem;
-  width: 5rem;
+  padding: 0.5rem 1.5rem;
+  margin-bottom: 2rem;
   border-radius: 0.5rem;
   background-color: #82c4c3;
   border: #7ec0be 0.2rem solid;
-  color: #fff5f5;
+  color: #ffffff;
 }
-#personalInfo input[type="submit"]:hover, #personalInfo input[type="submit"]:active{
+input[type="submit"]:hover, input[type="submit"]:active{
   background-color: #f9d89c;
   border: #f5d190 solid 0.2rem;
 }
@@ -29,6 +43,7 @@ table img{
 }
 
 table{
+  width: 40rem;
   margin: auto;
   background-image: radial-gradient( #fff5f5, #fff9f9);
 }
