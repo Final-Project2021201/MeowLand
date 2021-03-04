@@ -95,7 +95,6 @@ const submitPersonalInfoNotif = window.createNotification({});
 function handlePersonalInfoSubmit(event) {
   event.preventDefault();
   let newReview = new NewReview(event.target.fullName.value, event.target.review.value);
-  console.log(event.target.fullName.value);
   loadedReviews.addReview(newReview);
   loadedReviews.saveReviewToStorage();
   personalInfo.reset();
