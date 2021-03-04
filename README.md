@@ -9,4 +9,4 @@
 * Osama Noufal
 * Ali Rahhal
 
- 
+**Special Thanks for Tasnim Rawashdeh for designing logo and images for the website**

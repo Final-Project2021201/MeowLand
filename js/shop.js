@@ -109,36 +109,36 @@ const myNotification = window.createNotification({
 // Handles clicking on adopt button so it adds the pet item to the cart and saves it to local storage
 
 function handleClicking(event) {
-    event.preventDefault();
-    let index = parseInt(event.target.id);
-    loadedPetCart.addPet(petArr[index]);
-    loadedPetCart.saveToStorage();
-    window.createNotification({
-        // close on click
-        closeOnClick: true,
+  event.preventDefault();
+  let index = parseInt(event.target.id);
+  loadedPetCart.addPet(petArr[index]);
+  loadedPetCart.saveToStorage();
+  window.createNotification({
+    // close on click
+    closeOnClick: true,
 
-        // displays close button
-        displayCloseButton: false,
+    // displays close button
+    displayCloseButton: false,
 
-        // nfc-top-left
-        // nfc-bottom-right
-        // nfc-bottom-left
-        positionClass: 'nfc-top-right',
+    // nfc-top-left
+    // nfc-bottom-right
+    // nfc-bottom-left
+    positionClass: 'nfc-top-right',
 
-        // callback
-        onclick: false,
+    // callback
+    onclick: false,
 
-        // timeout in milliseconds
-        showDuration: 3500,
+    // timeout in milliseconds
+    showDuration: 3500,
 
-        // success, info, warning, error, and none
-        theme: 'success'
+    // success, info, warning, error, and none
+    theme: 'success'
 
-    })({
-      title: "Success",
-      message: "Thank you for choosing PetSpot"
-    });
-    counter();
+  })({
+    title: "Success",
+    message: "Thank you for choosing PetSpot"
+  });
+  counter();
 
 }
 
