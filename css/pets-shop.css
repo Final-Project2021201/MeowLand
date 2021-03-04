@@ -1,34 +1,24 @@
-#filter{
-    margin: 1rem;
-}
-#filterForm div{
-    display: inline-block;
-}
-#filter select {
-    width: 7rem;
-    vertical-align: middle;
-    font-size: 1.2rem;
-    text-align: center;
-    margin: 0.1rem 1.3rem;
-}
-#clearFilter{
-    font-size: 1.2rem;
-    padding: 0.2rem;
-    border-radius: 0.2rem;
-    margin-top: 0.6rem;
-}
-#shopDiv div img{
-    width: 15rem;
-}
-#shopDiv div{
-    display:inline-block;
-    margin: 1.5rem;
-    border: #f5a7a7 solid 0.2rem;
-    padding-bottom: 0.1rem;
-}
-#shopDiv button{
-    margin-top: 0.5rem;
-    font-size: 1rem;
-    padding: 0.4rem 0.8rem;
-    border-radius: 0.2rem;
-}
+
+    #petsImages img {
+        height: 85%;
+        width: 85%;
+
+        position: static;
+
+    }
+    
+
+    #petsImages div {
+        display: inline-block;
+        margin: 3%;
+        width: 18%;
+        position: relative;
+        columns: 100em;
+    }
+
+    #petsImages {
+        position: absolute;
+
+        text-align: center;
+
+    }
