@@ -110,18 +110,11 @@ const myNotification = window.createNotification({
 
 function handleClicking(event) {
 
-    if (!confirmationMsg) {
-        confirmationMsg = document.createElement('p');
-        shopDiv.appendChild(confirmationMsg);
-        confirmationMsg.innerHTML = 'Thank you for choosing PetSpot. Click <a href="checkout.html">here<a> to checkout';
-    }
     event.preventDefault();
     let index = parseInt(event.target.id);
     loadedPetCart.addPet(petArr[index]);
     loadedPetCart.saveToStorage();
     window.createNotification({
-        title: "Added",
-        message: "added successed!",
         // close on click
         closeOnClick: true,
 
@@ -143,9 +136,10 @@ function handleClicking(event) {
         theme: 'success'
 
     })({
-        title: "Added",
-        message: "added successed"
+      title: "Success",
+      message: "Thank you for choosing PetSpot"
     });
+
 
 }
 
@@ -153,7 +147,9 @@ function handleClicking(event) {
 
 clearFilterBtn.addEventListener('click', clearFilter);
 function clearFilter(event) {
+  filterForm.reset();
   renderImages();
+  filterForm.reset();
 }
 
 

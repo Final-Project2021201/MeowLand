@@ -11,6 +11,15 @@ function Pet(animal, breed, age, price, source) {
   petArr.push(this);
 }
 
+function Counter() {
+  const accessoriesCart = JSON.parse(localStorage.getItem('accessoriesCart')) || [];
+  const petscart = JSON.parse(localStorage.getItem('petCart')) || [];
+  let count = document.getElementById('cartCount');
+  count.textContent = accessoriesCart.length + petscart.length;
+}
+
+Counter();
+
 let petArr = [];
 
 const PetCart = function (items) {
@@ -34,20 +43,20 @@ PetCart.prototype.removePet = function (index) {
 // Creates constructor function for new reviews
 
 const Review = function (reviews) {
-    this.reviewItems = reviews;
+  this.reviewItems = reviews;
 };
 
 Review.prototype.addReview = function (review) {
-    this.reviewItems.push(review);
+  this.reviewItems.push(review);
 };
 
 Review.prototype.saveReviewToStorage = function () {
-    localStorage.setItem('reviews', JSON.stringify(this.reviewItems));
+  localStorage.setItem('reviews', JSON.stringify(this.reviewItems));
 };
 
 function NewReview(name, review) {
-    this.name = name;
-    this.review = review;
+  this.name = name;
+  this.review = review;
 }
 
 
@@ -231,12 +240,12 @@ function createAccessoriesInstances() {
 createAccessoriesInstances();
 
 window.addEventListener("load", () => {
-    document.querySelector("body").classList.add("loaded");
+  document.querySelector("body").classList.add("loaded");
 });
 
 // Creates sticky navbar
 
-window.onscroll = function() {myFunction();};
+window.onscroll = function () { myFunction(); };
 
 let navbar = document.getElementsByTagName('nav')[0];
 let sticky = navbar.offsetTop;
@@ -248,3 +257,12 @@ function myFunction() {
     navbar.classList.remove('sticky');
   }
 }
+
+function Counter() {
+  const accessoriesCart = JSON.parse(localStorage.getItem('accessoriesCart')) || [];
+  const petscart = JSON.parse(localStorage.getItem('petCart')) || [];
+  let count = document.getElementById('cartCount');
+  count.textContent = accessoriesCart.length + petscart.length;
+}
+Counter();
+

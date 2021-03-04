@@ -1,28 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <head> 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Frijole&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dokdo&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+  
+  <title>Home</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/home.css">
 
-
-
-
-
-    <title>Home</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/home.css">
-   
 </head>
 
 
 
 <body>
+<<<<<<< HEAD
     <header>
 
 
@@ -32,24 +30,67 @@
         </div>
     </header>
     <hr>
+=======
+  <header>
+    <div>
+      <img src="images/logoo.png" alt="logo" id="logo">
+      <h1 id="pet">Pet Spot</h1>
+    </div>
+  </header>
+
+  <div class="content">
+    <main>
+
+>>>>>>> 801ee0889c678015532a945f151e1e506aaea3b6
     <nav>
       <ul>
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="../pages/accessories-Products.html">Accessories Products</a></li>
-          <li><a href="../pages/pets-Shop.html">Pet Shop</a></li>
-          <li><a href="../pages/guides.html">Pet Guides</a></li>
-          <li><a href="../pages/about-us.html">About Us</a></li>
-          <li><a href="../pages/checkout.html">Checkout</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="pages/accessories-Products.html">Accessories Products</a></li>
+          <li><a href="pages/pets-Shop.html">Pet Shop</a></li>
+          <li><a href="pages/guides.html">Pet Guides</a></li>
+          <li><a href="pages/about-us.html">About Us</a></li>
+          <li><a href="pages/checkout.html">Checkout  <span id="cartCount"></span></a></li>
       </ul>
-      </nav>
+    </nav>
 
     <div class="content">
       <main>
-        <div class="lines">
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
+        <div class="slideshow-container">
+
+          <div class="mySlides fade">
+            <div class="numbertext">1 / 6</div>
+            <img src="images/gallery2/gallery1.jpg">
+          </div>
+          
+          <div class="mySlides fade">
+            <div class="numbertext">2 / 6</div>
+            <img src="images/gallery2/gallery2.jpg">
+          </div>
+          
+          <div class="mySlides fade">
+            <div class="numbertext">3 / 6</div>
+            <img src="images/gallery2/gallery3.jpg">
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">4 / 6</div>
+            <img src="images/gallery2/gallery4.jpg">
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">5 / 6</div>
+            <img src="images/gallery2/gallery5.jpg">
+          </div>
+          
+          <div class="mySlides fade">
+            <div class="numbertext">5 / 6</div>
+            <img src="images/gallery2/gallery6.jpg">
+          </div>
+          
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
+<<<<<<< HEAD
            
           <div class="container">
   
@@ -129,14 +170,41 @@
                in our store </h2>
           <img id="floatRight" src="images/home image/petscare.png" width="450" height="300" alt="">
          
+=======
+        <br>
+          
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span> 
+            <span class="dot" onclick="currentSlide(2)"></span> 
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>    
+        </div>
+      
+        <p class="petsText">
+          We at PetSpot are willing to help you take care of your pet to the fullest by providing you with the products and resources you need to fully enjoy the quality time you spend with your pet. </p>
+        <p class="petsText">    
+          We have all the products you need to care for your pet, from food and treats to toys and more! At PetSpot, our goal is to provide our customers and their new pets everything they need for a happy life together.</p>
+        <p class="petsText">    
+          During these challenging times, PetSpot is available at your service through delivery only as our mission is to assure the safety of our customers.</p>
+        <h6>Here are some of our customer reviews</h6>
+        <div id="reviews">
+          <div>
+            <h6>Shahed Musleh</h6>
+            <p>I bought my first pet from PetSpot and then kept turning to it for pet supplies. Everything you need from a pet shop is right there. Highly recommend!</p>
+>>>>>>> 801ee0889c678015532a945f151e1e506aaea3b6
           </div>
-          <div id="reviews"></div>
+          <div>
+          <h6>Ali Rahhal</h6>
+          <p>I would recommend everyone wanting to take best care of their pets this shop. All products are high quality. Food is made from natural ingredients. Their toys and clothes make my pets very happy!</p>
+          </div>
+        </div>
       </main>
-  
-  
       <footer>
         <div id="hoursOpen">
-          <h4>Hours Open</h4>
+          <h4>Opening Hours</h4>
+          <p>Sun - Fri</p>
           <p>09:00 a.m. - 09:00 p.m.</p>
         </div>
 
@@ -144,14 +212,20 @@
         <div id="contactInfo">
           <h4>Contact Info</h4>
           <p>Telephone: +962 7788991122</p>
-          <p><a href="mailto:info@petshop.com">info@petshop.com</a></p>
+          <div id="icons">
+            <a href="mailto:info@petshop.com"><img src="images/icons/email.png" alt=""></a>
+            <a href="https://web.facebook.com/"><img src="images/icons/facebook.png" alt=""></a>
+            <a href="https://www.instagram.com/"><img src="images/icons/instagram.png" alt=""></a>
+            <a href="https://www.linkedin.com/"><img src="images/icons/linkedin.png" alt=""></a>
+            <a href="https://www.twitter.com/"><img src="images/icons/twitter.png" alt=""></a>
+          </div>
         </div>
-      </footer>
-  
-    </div>
-    
-    <script src="js/app.js"></script>
-    <script src="js/home.js"></script>
+    </footer>
+
+  </div>
+
+  <script src="js/app.js"></script>
+  <script src="js/home.js"></script>
 </body>
 
 

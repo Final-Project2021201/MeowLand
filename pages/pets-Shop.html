@@ -24,7 +24,7 @@
 
 <body>
     <header>
-        <div >
+        <div>
             <img src="../images/logoo.png" alt="logo" id="logo">
             <h1 id="pet">Pet Spot</h1>
         </div>
@@ -33,11 +33,11 @@
     <nav>
         <ul>
             <li><a href="../index.html">Home</a></li>
-            <li><a href="../pages/accessories-Products.html">Accessories Products</a></li>
-            <li><a href="../pages/pets-Shop.html">Pet Shop</a></li>
-            <li><a href="../pages/guides.html">Pet Guides</a></li>
-            <li><a href="../pages/about-us.html">About Us</a></li>
-            <li><a href="../pages/checkout.html">Checkout</a></li>
+            <li><a href="accessories-Products.html">Accessories Products</a></li>
+            <li><a href="pets-Shop.html">Pet Shop</a></li>
+            <li><a href="guides.html">Pet Guides</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="checkout.html">Checkout  <span id="cartCount"></span></a></li>
         </ul>
     </nav>
     <div class="content">
@@ -46,13 +46,13 @@
             <div id="filter">
                 <form action="" id="filterForm">
                     <div>
-                        <label for="petsType" class="type">Filter By Type</label>
+                        <label for="petsType" class="type">Type</label>
                         <select id="petsType" class="type">
-    
-    
-    
+
+
+
                             <option value="Select">Select</option>
-    
+
                             <option value="Cats">Cats</option>
                             <option value="Dogs">Dogs</option>
                             <option value="Birds">Birds</option>
@@ -60,48 +60,57 @@
                         </select>
                     </div>
                     <div>
-                        <label for="petsAge" class="age">Filter By Age</label>
+                        <label for="petsAge" class="age">Age</label>
                         <select id="petsAge" class="age">
                             <option value="0">Select</option>
-    
-    
+
+
                             <option value="month">less than 1 Year</option>
                             <option value="year">More than 1 Year</option>
-    
+
                         </select>
                     </div>
                     <div>
-                        <label for="" class="price">Filter By Price</label>
+                        <label for="" class="price">Price</label>
                         <select id="petsPrice" class="price">
-    
+
                             <option value="2000">Select</option>
                             <option value="0">0JD - 249JD</option>
                             <option value="250">250JD - 499JD</option>
                             <option value="500">500+ JD</option>
-    
+
                         </select>
                     </div>
-    
-                    <div >
-                        <input type="submit" value="Filter" id="fill" >
-    
+
+                    <div>
+                        <input type="submit" value="Filter" id="fill">
+
                     </div>
+                    <div> <button id="clearFilter">Clear Filter</button></div>
                 </form>
-                <button id="clearFilter">Clear Filter</button>
+               
             </div>
             <div id="shopDiv">
             </div>
         </main>
         <footer>
             <div id="hoursOpen">
-                <h4>Hours Open</h4>
+                <h4>Opening Hours</h4>
+                <p>Sun - Fri</p>
                 <p>09:00 a.m. - 09:00 p.m.</p>
             </div>
-            <iframe width="40%" height="10%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=31.9515694,%2035.9239625&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+            <iframe width="40%" height="10%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+                src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=31.9515694,%2035.9239625&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
             <div id="contactInfo">
                 <h4>Contact Info</h4>
                 <p>Telephone: +962 7788991122</p>
-                <p><a href="mailto:info@petshop.com">info@petshop.com</a></p>
+                <div id="icons">
+                    <a href="mailto:info@petshop.com"><img src="../images/icons/email.png" alt=""></a>
+                    <a href="https://web.facebook.com/"><img src="../images/icons/facebook.png" alt=""></a>
+                    <a href="https://www.instagram.com/"><img src="../images/icons/instagram.png" alt=""></a>
+                    <a href="https://www.linkedin.com/"><img src="../images/icons/linkedin.png" alt=""></a>
+                    <a href="https://www.twitter.com/"><img src="../images/icons/twitter.png" alt=""></a>
+                </div>
             </div>
         </footer>
     </div>
