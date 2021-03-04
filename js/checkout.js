@@ -6,7 +6,8 @@ let AccessoriesCartInfo = document.createElement('tbody');
 let cartTableDiv = document.getElementById('cartTableDiv');
 let cartTable = document.getElementById('cartTable');
 let personalInfo = document.getElementById('personalInfo');
-personalInfo.addEventListener('submit', handlePersonalInfoSubmit);
+
+personalInfo.addEventListener('submit', handlePersonalInfoSubmit); 
 
 cartInfo.addEventListener('click', removeItemFromCart);
 

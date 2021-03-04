@@ -44,20 +44,20 @@
         <label for="phoneNo" class="phone">Phone Number</label><input id="phoneNo" type="text" required
           pattern="^[0-9]+$" class="phone"><br>
         <label for="review" class="review">Add a review</label><input id="review" type="text" class="review"><br>
+        <div id="cartTableDiv">
+          <table id="cartTable">
+            <thead>
+              <tr>
+                <th>Remove</th>
+                <th>Type</th>
+                <th>Price</th>
+                <th>Picture</th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+        <input type="submit" value="submit">
       </form>
-      <div id="cartTableDiv">
-        <table id="cartTable">
-          <thead>
-            <tr>
-              <th>Remove</th>
-              <th>Type</th>
-              <th>Price</th>
-              <th>Picture</th>
-            </tr>
-          </thead>
-        </table>
-      </div>
-      <input type="submit" value="submit">
     </main>
     <footer>
       <div id="hoursOpen">
@@ -69,7 +69,14 @@
       <div id="contactInfo">
         <h4>Contact Info</h4>
         <p>Telephone: +962 7788991122</p>
-        <p><a href="mailto:info@petshop.com">info@petshop.com</a></p>
+        <div id="icons">
+          <a href="mailto:info@petshop.com"><img src="../images/icons/email.png" alt=""></a>
+          <a href="https://web.facebook.com/"><img src="../images/icons/facebook.png" alt=""></a>
+          <a href="https://www.instagram.com/"><img src="../images/icons/instagram.png" alt=""></a>
+          <a href="https://www.linkedin.com/"><img src="../images/icons/linkedin.png" alt=""></a>
+          <a href="https://www.twitter.com/"><img src="../images/icons/twitter.png" alt=""></a>
+        </div>
+        
       </div>
     </footer>
   </div>

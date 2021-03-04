@@ -14,7 +14,7 @@
   font-size: 1.2rem;
   text-align: left;
 }
-#personalInfo input {
+#personalInfo input:nth-of-type(1), #personalInfo input:nth-of-type(2), #personalInfo input:nth-of-type(3), #personalInfo input:nth-of-type(4) {
   width: 24rem;
   background-color: #fff9ee;
   border: #856f46 1px solid;
