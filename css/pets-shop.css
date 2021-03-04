@@ -1,0 +1,49 @@
+#filter{
+    margin: 1rem; 
+}
+#filter div {
+    vertical-align: middle;
+}
+#filterForm div{
+    display: inline-block;
+}
+#filter label {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+#filter select {
+    padding: 0.5rem;
+    font-size: 1rem;
+    vertical-align: middle;
+    text-align: center;
+    margin: 0.2rem 1rem;
+    background-color: bisque;
+
+}
+#clearFilter, input[type="submit"]{
+    font-size: 1rem;
+    padding: 0.5rem;
+    border-radius: 0.2rem;
+    margin: 0.2rem;
+    background-color: #f5a7a7;
+    border: #f5a7a7 solid 1px;
+}
+#clearFilter:hover, #clearFilter:active, input[type="submit"]:hover, input[type="submit"]:active, #clearFilter:focus, input[type="submit"]:focus {
+    background-color: #e99898;
+    border: #e99898 solid 1px;
+}
+#shopDiv div img{
+    width: 15rem;
+}
+#shopDiv div{
+    display:inline-block;
+    margin: 1.5rem;
+    border: #f5a7a7 solid 0.2rem;
+    padding-bottom: 0.1rem;
+}
+#shopDiv button{
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 0.2rem;
+}
