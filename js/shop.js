@@ -138,6 +138,7 @@ function handleClicking(event) {
       title: "Success",
       message: "Thank you for choosing PetSpot"
     });
+    counter();
 
 }
 

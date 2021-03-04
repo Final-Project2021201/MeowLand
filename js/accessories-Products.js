@@ -138,5 +138,6 @@ function handleClickingAddToCart() {
         title: "Success",
         message: "Item added"
     });
+    counter();
 
 }
