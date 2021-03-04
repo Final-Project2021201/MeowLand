@@ -67,7 +67,7 @@ let parent = document.getElementById('guidesContainer');
                     let readBtn = document.createElement('button');
                     readBtn.textContent = 'Continue Reading';
                     guideSection.appendChild(readBtn);
-                    readBtn.onclick = function (){
+                    readBtn.onclick = function () {
                         guideContent.classList.toggle('expanded');
                         if (guideContent.className === 'expanded') {
                             readBtn.textContent = 'Collapse Content';
@@ -88,7 +88,7 @@ let parent = document.getElementById('guidesContainer');
             let readBtn = document.createElement('button');
             readBtn.textContent = 'Continue Reading';
             guideSection.appendChild(readBtn);
-            readBtn.onclick = function (){
+            readBtn.onclick = function () {
                 guideContent.classList.toggle('expanded');
                 if (guideContent.className === 'expanded') {
                     readBtn.textContent = 'Collapse Content';

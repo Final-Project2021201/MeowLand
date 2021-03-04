@@ -1,4 +1,3 @@
-
 #guidesContainer button {
     cursor: pointer;
     display: block;
@@ -6,17 +5,17 @@
     margin-top: 1rem;
     margin-left: auto;
     margin-right: auto;
-  
     border: 4px solid #f5a7a7;
     border-radius: 3px;
     background-color: #f5a7a7;
     color: #fff9f9;
     font-size: 1rem;
     padding: 0.5rem;
-}  
+}
+
 #guidesContainer button:hover, #guidesContainer button:active, #guidesContainer button:focus {
-      background-color: darken(#EABF9F, 2%);
-      border: 1px solid #EABF9F;
+    background-color: darken(#EABF9F, 2%);
+    border: 1px solid #EABF9F;
 }
 
 #guidesContainer section {
@@ -25,7 +24,7 @@
     margin: 1.5rem auto;
 }
 
-#guidesContainer section h5{
+#guidesContainer section h5 {
     font-size: 1.3rem;
     margin: 0.5rem;
     font-family: 'Pacifico';
@@ -41,7 +40,7 @@
     line-height: 1.20;
 }
 
-#guidesContainer section{
+#guidesContainer section {
     color: rgb(61, 57, 57);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
@@ -51,11 +50,12 @@
     max-height: 10rem;
     overflow: hidden;
     transition: max-height 1s ease;
-}    
-#guidesContainer div.expanded {
-      max-height: 100%;
 }
-  
+
+#guidesContainer div.expanded {
+    max-height: 100%;
+}
+
 #guidesContainer div:not(.expanded)::after {
     content: '';
     position: absolute;
@@ -65,4 +65,3 @@
     right: 0;
     background: linear-gradient( #fff9f900, #fff5f5ab);
 }
-

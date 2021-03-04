@@ -6,7 +6,7 @@ let AccessoriesCartInfo = document.createElement('tbody');
 let cartTableDiv = document.getElementById('cartTableDiv');
 let cartTable = document.getElementById('cartTable');
 let personalInfo = document.getElementById('personalInfo');
-personalInfo.addEventListener('submit', handlePersonalInfoSubmit); 
+personalInfo.addEventListener('submit', handlePersonalInfoSubmit);
 cartInfo.addEventListener('click', removeItemFromCart);
 
 function renderCart() {
@@ -177,7 +177,7 @@ const removeAccessoryNotif = window.createNotification({});
 function removeAccessoryFromCart(event) {
   loadCart();
   let itemIndex;
-  if(loadedPetCart.adoptedPets.length > 0){
+  if (loadedPetCart.adoptedPets.length > 0) {
     itemIndex = event.path[2].rowIndex - (loadedPetCart.adoptedPets.length + 1);
   } else {
     itemIndex = event.path[2].rowIndex - 1;
@@ -214,10 +214,10 @@ function removeAccessoryFromCart(event) {
   });
 }
 
-function checkTableEmpty(){
+function checkTableEmpty() {
   loadCart();
   loadAccessoryCart();
-  if (loadedPetCart.adoptedPets.length === 0 && loadedAccessoriesCart.cartAccessories.length === 0){
+  if (loadedPetCart.adoptedPets.length === 0 && loadedAccessoriesCart.cartAccessories.length === 0) {
     cartTableDiv.innerHTML = '';
   }
 }
