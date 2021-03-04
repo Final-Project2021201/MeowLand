@@ -23,6 +23,8 @@
 #shopDiv div{
     display:inline-block;
     margin: 1.5rem;
+    border: #f5a7a7 solid 0.2rem;
+    padding-bottom: 0.1rem;
 }
 #shopDiv button{
     margin-top: 0.5rem;

@@ -13,10 +13,7 @@ body {
 
     background-color: #fffbf1;
     font-family: Arial, Helvetica, sans-serif;
-   
-    
- 
-    
+       
   }
  
   .button{
@@ -193,7 +190,6 @@ body {
   
   /* Position the "next button" to the right */
   .next {
-    right: 0;
     border-radius: 3px 0 0 3px;
   }
   
@@ -308,12 +304,11 @@ border-style: double;
       top:30%;
       left:15%;
       
-      
-      
   }
 
   h6{
     background-color:rgb(178, 245, 223);
+    text-align: left;
   }
 
   
