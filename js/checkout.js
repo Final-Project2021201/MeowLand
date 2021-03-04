@@ -6,7 +6,9 @@ let AccessoriesCartInfo = document.createElement('tbody');
 let cartTableDiv = document.getElementById('cartTableDiv');
 let cartTable = document.getElementById('cartTable');
 let personalInfo = document.getElementById('personalInfo');
+
 personalInfo.addEventListener('submit', handlePersonalInfoSubmit); 
+
 cartInfo.addEventListener('click', removeItemFromCart);
 
 function renderCart() {
@@ -60,6 +62,7 @@ function removeItemFromCart(event) {
   cartInfo.removeChild(deletedRow);
   let newArr = loadedPetCart.removePet(itemIndex);
   localStorage.setItem('petCart', JSON.stringify(newArr));
+  Counter();
   checkTableEmpty();
   window.createNotification({
     // close on click
@@ -93,6 +96,7 @@ let loadedReviews = new Review(loadedReviewsArr);
 
 const submitPersonalInfoNotif = window.createNotification({});
 function handlePersonalInfoSubmit(event) {
+
   event.preventDefault();
   let newReview = new NewReview(event.target.fullName.value, event.target.review.value);
   loadedReviews.addReview(newReview);
@@ -120,8 +124,10 @@ function handlePersonalInfoSubmit(event) {
     theme: 'success'
 
   })({
-    title: "Submitted",
-    message: "The order will be delivered in 1 Day \n \n Thank You"
+
+    title: "Submited",
+    message: `The order will be delivered within 1 Day \n \n Thank You...  `
+
   });
 }
 
@@ -137,6 +143,7 @@ function renderAccessoriesCart() {
 function loadAccessoryCart() {
   const accessoriesCart = JSON.parse(localStorage.getItem('accessoriesCart')) || [];
   loadedAccessoriesCart = new AccessoriesCart(accessoriesCart);
+
 }
 
 loadAccessoryCart();
@@ -175,6 +182,14 @@ function clearAccessoryCart() {
 
 const removeAccessoryNotif = window.createNotification({});
 function removeAccessoryFromCart(event) {
+
+  console.log(event);
+  let itemIndex = event.path[2].rowIndex - 1;
+  let deletedRow = tBAccessories.childNodes[itemIndex];
+  tBAccessories.removeChild(deletedRow);
+  let newArr = loadedAccessoriesCart.removeAccessory(itemIndex);
+  localStorage.setItem('accessoriesCart', JSON.stringify(newArr));
+  Counter();
   loadCart();
   let itemIndex;
   if(loadedPetCart.adoptedPets.length > 0){
@@ -209,8 +224,10 @@ function removeAccessoryFromCart(event) {
     theme: 'warning'
 
   })({
+
     title: "Success",
     message: "Item deleted"
+
   });
 }
 
