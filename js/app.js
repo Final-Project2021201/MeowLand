@@ -248,3 +248,17 @@ function myFunction() {
     navbar.classList.remove('sticky');
   }
 }
+
+function Counter() {
+  const accessoriesCart = JSON.parse(localStorage.getItem('accessoriesCart')) || [];
+  const petscart = JSON.parse(localStorage.getItem('petCart')) || [];
+  let count = document.getElementById('cartCount');
+  count.textContent = accessoriesCart.length + petscart.length;
+}
+Counter();
+
+
+
+
+
+
